@@ -337,17 +337,15 @@
             `;
 
             const videoContent = `
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 md:p-8 rounded-3xl shadow-2xl transition-all duration-300 transform-gpu hover:bg-white/15 cursor-default">
-                    <h2 class="text-3xl md:text-4xl font-bold text-amber-400 mb-6 leading-tight drop-shadow-sm">Câu chuyện phục hồi kỳ diệu</h2>
-                    <p class="text-lg md:text-xl text-white/95 leading-relaxed">
-                        Năm 2019, vườn sầu riêng của <strong>anh Nguyễn Văn Tư</strong> (Cư M'gar, Đắk Lắk) gần như bỏ cuộc — đất cứng như đá, rễ thối, trái rụng đầy gốc. Sau khi thử chế phẩm vi sinh <strong>Green Earth SL</strong> theo lời khuyên của cán bộ khuyến nông, chỉ sau 2 vụ, đất mềm trở lại, cây phục hồi, vụ 2024 anh thu gần <span class="text-amber-400 font-bold drop-shadow-sm">4 tấn</span>.
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 sm:p-8 rounded-[28px] sm:rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 transform-gpu hover:bg-white/15 cursor-default flex flex-col h-full justify-center">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-400 mb-4 sm:mb-6 leading-tight drop-shadow-sm">Câu chuyện phục hồi kỳ diệu</h2>
+                    <p class="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed font-medium">
+                        Năm 2019, vườn sầu riêng của <strong>anh Nguyễn Văn Tư</strong> (Cư M'gar, Đắk Lắk) gần như bỏ cuộc — đất cứng như đá, rễ thối, trái rụng đầy gốc. Sau khi thử chế phẩm vi sinh <strong>Green Earth SL</strong> theo lời khuyên của cán bộ khuyến nông, chỉ sau 2 vụ, đất mềm trở lại, cây phục hồi, vụ 2024 anh thu gần <span class="text-amber-400 font-bold drop-shadow-md text-xl sm:text-2xl">4 tấn</span>.
                     </p>
-                <div class=" mt-5 ml-10 flex flex-col sm:flex-row gap-4 mb-8">
-                    <a class="bg-primary hover:bg-primary-container text-on-primary px-10 py-4 rounded-xl font-bold text-lg text-center transition-all active:scale-95 shadow-lg shadow-primary/20" href="#order">Đặt hàng ngay</a>
-                    <a class="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg text-center transition-all" href="#order">Miễn phí ship</a>
-                </div>
-
-
+                    <div class="mt-6 ml-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                        <a class="bg-gradient-to-r from-primary to-emerald-600 hover:from-primary-container hover:to-emerald-500 text-white px-8 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg text-center transition-all active:scale-95 shadow-lg shadow-primary/30 border border-emerald-500/30 flex items-center justify-center" href="#order">Đặt hàng ngay</a>
+                        <a class="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-8 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg text-center transition-all shadow-sm flex items-center justify-center" href="#order">Miễn phí ship</a>
+                    </div>
                 </div>
             `;
 
@@ -493,7 +491,7 @@
                         <!-- Carousel Images & Video -->
                         <div id="hero-carousel"
                             class="flex w-full h-full transition-transform duration-500 ease-in-out">
-                            <video id="hero-video" src="images/Videoquangcao.mp4" playsinline muted
+                            <video id="hero-video" src="images/36mb.mp4" playsinline muted
                                 class="block w-full h-[600px] object-cover flex-shrink-0 transition-transform duration-700 cursor-pointer"></video>
 
                             <img src="images/anhnongdan.JPG"
@@ -1444,106 +1442,70 @@
             </section>
         </div>
         <!-- Social Proof -->
-        <div data-aos="fade-right">
+        <div data-aos="fade-up">
             <section class="py-16 lg:py-24 bg-surface overflow-hidden">
-                <div class="max-w-7xl mx-auto px-4 lg:px-6">
+                <div class="max-w-7xl mx-auto px-0 sm:px-4 lg:px-6">
 
                     <!-- Heading -->
-                    <div class="text-center mb-12 lg:mb-16">
+                    <div class="text-center mb-10 sm:mb-16 px-4 sm:px-0">
                         <h2
-                            class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary leading-tight max-w-4xl mx-auto">
+                            class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary leading-tight max-w-4xl mx-auto drop-shadow-sm">
                             "Hơn 500 vườn sầu riêng đã tin dùng — nghe họ nói gì"
                         </h2>
                     </div>
 
-                    <!-- Slider Wrapper (Thêm px-12 hoặc px-16 để tạo khoảng trống 2 bên cho nút) -->
-                    <div class="relative group/slider px-14 sm:px-16 lg:px-20">
+                    <!-- Slider Wrapper -->
+                    <div class="relative group/slider px-0 sm:px-14 lg:px-20">
 
-                        <!-- Nút điều hướng Trái (Định vị tuyệt đối sát lề trái của vùng đệm) -->
+                        <!-- Nút điều hướng Trái -->
                         <button id="prev-btn"
-                            class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-gray-200 bg-white text-slate-700 flex items-center justify-center shadow-lg hover:bg-primary hover:text-white hover:border-primary active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none">
+                            class="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-gray-200 bg-white text-slate-700 items-center justify-center shadow-lg hover:bg-primary hover:text-white hover:border-primary active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none">
                             <span class="material-symbols-outlined font-bold">arrow_back</span>
                         </button>
 
-                        <!-- Nút điều hướng Phải (Định vị tuyệt đối sát lề phải của vùng đệm) -->
+                        <!-- Nút điều hướng Phải -->
                         <button id="next-btn"
-                            class="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-gray-200 bg-white text-slate-700 flex items-center justify-center shadow-lg hover:bg-primary hover:text-white hover:border-primary active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none">
+                            class="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-gray-200 bg-white text-slate-700 items-center justify-center shadow-lg hover:bg-primary hover:text-white hover:border-primary active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none">
                             <span class="material-symbols-outlined font-bold">arrow_forward</span>
                         </button>
 
-                        <!-- Slider Container (Bỏ px thừa để ăn theo khoảng đệm chuẩn của Wrapper) -->
+                        <!-- Slider Container -->
                         <div id="slider-container"
-                            class="flex gap-8 overflow-x-auto scrollbar-none scroll-smooth snap-x snap-mandatory pb-4 items-stretch">
+                            class="flex gap-4 sm:gap-8 overflow-x-auto scrollbar-none scroll-smooth snap-x snap-mandatory pb-8 pt-4 px-4 sm:px-0 items-stretch">
 
                             <!-- Item 1 -->
                             <div
-                                class="w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] flex-shrink-0 snap-start bg-white rounded-[32px] border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-auto group overflow-hidden">
+                                class="w-[85vw] max-w-[340px] sm:max-w-none sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] flex-shrink-0 snap-center sm:snap-start bg-white rounded-[24px] sm:rounded-[32px] border border-gray-100 shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 flex flex-col h-auto group overflow-hidden relative">
                                 <div class="w-full aspect-square overflow-hidden relative group/video">
-                                    <video src="images/TestVideoLandingPage.mp4"
+                                    <video src="images/86mb.mp4"
                                         class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-700"
                                         muted playsinline></video>
                                     <div
-                                        class="absolute inset-0 bg-black/40 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <button onclick="openVideoModal('images/TestVideoLandingPage.mp4')"
-                                            class="bg-white/20 backdrop-blur-md border border-white/40 text-white rounded-full px-6 py-2 flex items-center gap-2 hover:bg-white/30 hover:scale-105 transition-all">
-                                            <span class="material-symbols-outlined text-2xl">play_circle</span>
-                                            <span class="font-bold tracking-wide">Xem video</span>
+                                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-100 sm:opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <button onclick="openVideoModal('images/86mb.mp4')"
+                                            class="bg-white/20 backdrop-blur-md border border-white/40 text-white rounded-full px-5 py-2.5 sm:px-6 sm:py-2 flex items-center gap-2 hover:bg-white/30 hover:scale-105 transition-all shadow-[0_0_15px_rgba(0,0,0,0.2)]">
+                                            <span
+                                                class="material-symbols-outlined text-3xl drop-shadow-md">play_circle</span>
+                                            <span class="font-bold tracking-wide drop-shadow-md">Xem video</span>
                                         </button>
                                     </div>
                                 </div>
-                                <div class="p-8 flex flex-col flex-grow">
-                                    <div class="flex items-center gap-4 mb-6">
+                                <div class="p-6 sm:p-8 flex flex-col flex-grow">
+                                    <div class="flex items-center gap-4 mb-5 sm:mb-6">
                                         <div
-                                            class="w-14 h-14 rounded-full bg-green-200 text-green-800 font-bold text-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-green-100 text-green-800 font-bold text-lg sm:text-xl flex items-center justify-center flex-shrink-0 border border-green-200 group-hover:scale-110 group-hover:bg-green-600 group-hover:text-white transition-all duration-300 shadow-sm">
                                             TN
                                         </div>
                                         <div>
                                             <h3
-                                                class="font-bold text-lg text-slate-900 group-hover:text-primary transition-colors">
+                                                class="font-bold text-base sm:text-lg text-slate-900 group-hover:text-primary transition-colors">
                                                 Ông Trần Văn Nam
                                             </h3>
-                                            <p class="text-sm text-slate-500">Buôn Ma Thuột, Đắk Lắk · 2 ha</p>
+                                            <p class="text-xs sm:text-sm text-slate-500">Buôn Ma Thuột, Đắk Lắk · 2 ha
+                                            </p>
                                         </div>
                                     </div>
-                                    <p class="text-slate-700 italic flex-grow leading-relaxed">
-                                        "Trước đây vụ nào cũng lo thối rễ, mua thuốc tốn cả chục triệu mà không dứt.
-                                        Dùng Green Earth SL được 3 tháng, đất mềm hẳn, lá xanh trở lại. Vụ vừa rồi đậu
-                                        trái gấp đôi năm ngoái."
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Item 1 lặp lại (theo code gốc của bạn) -->
-                            <div
-                                class="w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] flex-shrink-0 snap-start bg-white rounded-[32px] border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-auto group overflow-hidden">
-                                <div class="w-full aspect-square overflow-hidden relative group/video">
-                                    <video src="images/TestVideoLandingPage.mp4"
-                                        class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-700"
-                                        muted playsinline></video>
-                                    <div
-                                        class="absolute inset-0 bg-black/40 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <button onclick="openVideoModal('images/TestVideoLandingPage.mp4')"
-                                            class="bg-white/20 backdrop-blur-md border border-white/40 text-white rounded-full px-6 py-2 flex items-center gap-2 hover:bg-white/30 hover:scale-105 transition-all">
-                                            <span class="material-symbols-outlined text-2xl">play_circle</span>
-                                            <span class="font-bold tracking-wide">Xem video</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="p-8 flex flex-col flex-grow">
-                                    <div class="flex items-center gap-4 mb-6">
-                                        <div
-                                            class="w-14 h-14 rounded-full bg-green-200 text-green-800 font-bold text-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                                            TN
-                                        </div>
-                                        <div>
-                                            <h3
-                                                class="font-bold text-lg text-slate-900 group-hover:text-primary transition-colors">
-                                                Ông Trần Văn Nam
-                                            </h3>
-                                            <p class="text-sm text-slate-500">Buôn Ma Thuột, Đắk Lắk · 2 ha</p>
-                                        </div>
-                                    </div>
-                                    <p class="text-slate-700 italic flex-grow leading-relaxed">
+                                    <p class="text-sm sm:text-base text-slate-700 italic flex-grow leading-relaxed">
                                         "Trước đây vụ nào cũng lo thối rễ, mua thuốc tốn cả chục triệu mà không dứt.
                                         Dùng Green Earth SL được 3 tháng, đất mềm hẳn, lá xanh trở lại. Vụ vừa rồi đậu
                                         trái gấp đôi năm ngoái."
@@ -1553,35 +1515,37 @@
 
                             <!-- Item 2 -->
                             <div
-                                class="w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] flex-shrink-0 snap-start bg-white rounded-[32px] border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-auto group overflow-hidden">
+                                class="w-[85vw] max-w-[340px] sm:max-w-none sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] flex-shrink-0 snap-center sm:snap-start bg-white rounded-[24px] sm:rounded-[32px] border border-gray-100 shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 flex flex-col h-auto group overflow-hidden relative">
                                 <div class="w-full aspect-square overflow-hidden relative group/video">
                                     <video src="images/TestVideoLandingPage.mp4"
                                         class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-700"
                                         muted playsinline></video>
                                     <div
-                                        class="absolute inset-0 bg-black/40 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-100 sm:opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                         <button onclick="openVideoModal('images/TestVideoLandingPage.mp4')"
-                                            class="bg-white/20 backdrop-blur-md border border-white/40 text-white rounded-full px-6 py-2 flex items-center gap-2 hover:bg-white/30 hover:scale-105 transition-all">
-                                            <span class="material-symbols-outlined text-2xl">play_circle</span>
-                                            <span class="font-bold tracking-wide">Xem video</span>
+                                            class="bg-white/20 backdrop-blur-md border border-white/40 text-white rounded-full px-5 py-2.5 sm:px-6 sm:py-2 flex items-center gap-2 hover:bg-white/30 hover:scale-105 transition-all shadow-[0_0_15px_rgba(0,0,0,0.2)]">
+                                            <span
+                                                class="material-symbols-outlined text-3xl drop-shadow-md">play_circle</span>
+                                            <span class="font-bold tracking-wide drop-shadow-md">Xem video</span>
                                         </button>
                                     </div>
                                 </div>
-                                <div class="p-8 flex flex-col flex-grow">
-                                    <div class="flex items-center gap-4 mb-6">
+                                <div class="p-6 sm:p-8 flex flex-col flex-grow">
+                                    <div class="flex items-center gap-4 mb-5 sm:mb-6">
                                         <div
-                                            class="w-14 h-14 rounded-full bg-blue-200 text-blue-800 font-bold text-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-100 text-blue-800 font-bold text-lg sm:text-xl flex items-center justify-center flex-shrink-0 border border-blue-200 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
                                             LT
                                         </div>
                                         <div>
                                             <h3
-                                                class="font-bold text-lg text-slate-900 group-hover:text-primary transition-colors">
+                                                class="font-bold text-base sm:text-lg text-slate-900 group-hover:text-primary transition-colors">
                                                 Bà Lê Thị Thảo
                                             </h3>
-                                            <p class="text-sm text-slate-500">Cai Lậy, Tiền Giang · 1,5 ha Ri6</p>
+                                            <p class="text-xs sm:text-sm text-slate-500">Cai Lậy, Tiền Giang · 1,5 ha
+                                                Ri6</p>
                                         </div>
                                     </div>
-                                    <p class="text-slate-700 italic flex-grow leading-relaxed">
+                                    <p class="text-sm sm:text-base text-slate-700 italic flex-grow leading-relaxed">
                                         "Vườn nhà tôi đất cứng 5 năm, xử lý bằng đủ loại mà không cải thiện. Sau 2 vụ
                                         dùng IVY Micro, đất tơi lại, múi sầu riêng cũng dày hơn, thương lái trả giá cao
                                         hơn 10%."
@@ -1591,38 +1555,77 @@
 
                             <!-- Item 3 -->
                             <div
-                                class="w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] flex-shrink-0 snap-start bg-white rounded-[32px] border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-auto group overflow-hidden">
+                                class="w-[85vw] max-w-[340px] sm:max-w-none sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] flex-shrink-0 snap-center sm:snap-start bg-white rounded-[24px] sm:rounded-[32px] border border-gray-100 shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 flex flex-col h-auto group overflow-hidden relative">
                                 <div class="w-full aspect-square overflow-hidden relative group/video">
                                     <video src="images/TestVideoLandingPage.mp4"
                                         class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-700"
                                         muted playsinline></video>
                                     <div
-                                        class="absolute inset-0 bg-black/40 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-100 sm:opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                         <button onclick="openVideoModal('images/TestVideoLandingPage.mp4')"
-                                            class="bg-white/20 backdrop-blur-md border border-white/40 text-white rounded-full px-6 py-2 flex items-center gap-2 hover:bg-white/30 hover:scale-105 transition-all">
-                                            <span class="material-symbols-outlined text-2xl">play_circle</span>
-                                            <span class="font-bold tracking-wide">Xem video</span>
+                                            class="bg-white/20 backdrop-blur-md border border-white/40 text-white rounded-full px-5 py-2.5 sm:px-6 sm:py-2 flex items-center gap-2 hover:bg-white/30 hover:scale-105 transition-all shadow-[0_0_15px_rgba(0,0,0,0.2)]">
+                                            <span
+                                                class="material-symbols-outlined text-3xl drop-shadow-md">play_circle</span>
+                                            <span class="font-bold tracking-wide drop-shadow-md">Xem video</span>
                                         </button>
                                     </div>
                                 </div>
-                                <div class="p-8 flex flex-col flex-grow">
-                                    <div class="flex items-center gap-4 mb-6">
+                                <div class="p-6 sm:p-8 flex flex-col flex-grow">
+                                    <div class="flex items-center gap-4 mb-5 sm:mb-6">
                                         <div
-                                            class="w-14 h-14 rounded-full bg-orange-200 text-orange-800 font-bold text-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-orange-100 text-orange-800 font-bold text-lg sm:text-xl flex items-center justify-center flex-shrink-0 border border-orange-200 group-hover:scale-110 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 shadow-sm">
                                             PH
                                         </div>
                                         <div>
                                             <h3
-                                                class="font-bold text-lg text-slate-900 group-hover:text-primary transition-colors">
+                                                class="font-bold text-base sm:text-lg text-slate-900 group-hover:text-primary transition-colors">
                                                 Ông Phạm Văn Hùng
                                             </h3>
-                                            <p class="text-sm text-slate-500">Xuân Lộc, Đồng Nai · 3 ha Musang King</p>
+                                            <p class="text-xs sm:text-sm text-slate-500">Xuân Lộc, Đồng Nai · 3 ha</p>
                                         </div>
                                     </div>
-                                    <p class="text-slate-700 italic flex-grow leading-relaxed">
+                                    <p class="text-sm sm:text-base text-slate-700 italic flex-grow leading-relaxed">
                                         "Tôi nghi ngờ lắm vì đã thử nhiều loại vi sinh rồi. Nhưng sau 6 tháng, tôi giảm
                                         được hơn nửa chi phí thuốc hóa học mà vườn còn khỏe hơn. Mùa sau tôi sẽ mở rộng
                                         ra toàn bộ vườn."
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item 4 (Thêm để có hiệu ứng vuốt tốt hơn) -->
+                            <div
+                                class="w-[85vw] max-w-[340px] sm:max-w-none sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] flex-shrink-0 snap-center sm:snap-start bg-white rounded-[24px] sm:rounded-[32px] border border-gray-100 shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 flex flex-col h-auto group overflow-hidden relative">
+                                <div class="w-full aspect-square overflow-hidden relative group/video">
+                                    <video src="images/TestVideoLandingPage.mp4"
+                                        class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-700"
+                                        muted playsinline></video>
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-100 sm:opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <button onclick="openVideoModal('images/TestVideoLandingPage.mp4')"
+                                            class="bg-white/20 backdrop-blur-md border border-white/40 text-white rounded-full px-5 py-2.5 sm:px-6 sm:py-2 flex items-center gap-2 hover:bg-white/30 hover:scale-105 transition-all shadow-[0_0_15px_rgba(0,0,0,0.2)]">
+                                            <span
+                                                class="material-symbols-outlined text-3xl drop-shadow-md">play_circle</span>
+                                            <span class="font-bold tracking-wide drop-shadow-md">Xem video</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-6 sm:p-8 flex flex-col flex-grow">
+                                    <div class="flex items-center gap-4 mb-5 sm:mb-6">
+                                        <div
+                                            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-purple-100 text-purple-800 font-bold text-lg sm:text-xl flex items-center justify-center flex-shrink-0 border border-purple-200 group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                                            HT
+                                        </div>
+                                        <div>
+                                            <h3
+                                                class="font-bold text-base sm:text-lg text-slate-900 group-hover:text-primary transition-colors">
+                                                Bà Hoàng Thị Tâm
+                                            </h3>
+                                            <p class="text-xs sm:text-sm text-slate-500">Bảo Lộc, Lâm Đồng · 1,2 ha</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm sm:text-base text-slate-700 italic flex-grow leading-relaxed">
+                                        "Đất ở đây dốc, dễ xói mòn và bạc màu. Từ ngày xài IVY, rễ cây bám chặt, lá xanh
+                                        đen, bóng mượt. Cây khỏe nên kháng bệnh tốt hẳn, tôi đỡ lo mỗi đợt mưa dầm."
                                     </p>
                                 </div>
                             </div>
@@ -1632,7 +1635,7 @@
                 </div>
             </section>
 
-            <!-- CSS bổ sung để ẩn thanh cuộn mặc định (Thêm vào file CSS của bạn hoặc đặt trong thẻ <style>) -->
+            <!-- CSS bổ sung -->
             <style>
                 .scrollbar-none::-webkit-scrollbar {
                     display: none;
@@ -1642,9 +1645,26 @@
                     -ms-overflow-style: none;
                     scrollbar-width: none;
                 }
+
+                /* Thêm animation cho modal */
+                @keyframes modalFadeIn {
+                    from {
+                        opacity: 0;
+                        backdrop-filter: blur(0px);
+                    }
+
+                    to {
+                        opacity: 1;
+                        backdrop-filter: blur(8px);
+                    }
+                }
+
+                .modal-active {
+                    animation: modalFadeIn 0.3s ease-out forwards;
+                }
             </style>
 
-            <!-- JavaScript điều khiển hiệu ứng trượt -->
+            <!-- JavaScript -->
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     const container = document.getElementById("slider-container");
@@ -1654,16 +1674,15 @@
                     if (!container || !prevBtn || !nextBtn) return;
 
                     function updateButtons() {
-                        // Làm mờ nút Trái nếu đã cuộn về đầu
                         prevBtn.disabled = container.scrollLeft <= 5;
-                        // Làm mờ nút Phải nếu đã cuộn đến cuối
                         nextBtn.disabled = container.scrollLeft + container.clientWidth >= container.scrollWidth - 5;
                     }
 
                     function getScrollAmount() {
-                        // Lấy độ rộng của phần tử con đầu tiên (bao gồm cả gap) để trượt đúng khoảng cách 1 card
                         const firstItem = container.querySelector("div");
-                        return firstItem ? firstItem.offsetWidth + 32 : container.clientWidth;
+                        // Tính gap dựa trên window size
+                        const gap = window.innerWidth < 640 ? 16 : 32;
+                        return firstItem ? firstItem.offsetWidth + gap : container.clientWidth;
                     }
 
                     nextBtn.addEventListener("click", () => {
@@ -1677,11 +1696,11 @@
                     container.addEventListener("scroll", updateButtons);
                     window.addEventListener("resize", updateButtons);
 
-                    // Khởi chạy kiểm tra trạng thái nút bấm ban đầu
                     setTimeout(updateButtons, 300);
                 });
 
-                // Modal Control functions
+                let modalOpenScrollY = 0;
+
                 function openVideoModal(videoSrc) {
                     const modal = document.getElementById('video-modal');
                     const modalContent = document.getElementById('video-modal-content');
@@ -1691,9 +1710,20 @@
                     player.play().catch(e => console.log('Autoplay prevented'));
 
                     modal.classList.remove('opacity-0', 'pointer-events-none');
-                    modalContent.classList.remove('scale-95');
-                    modalContent.classList.add('scale-100');
-                    document.body.classList.add('overflow-hidden'); // Prevent scrolling
+                    modal.classList.add('modal-active');
+                    modalContent.classList.remove('scale-95', 'translate-y-4');
+                    modalContent.classList.add('scale-100', 'translate-y-0');
+
+                    // Lưu vị trí cuộn hiện tại để kiểm tra scroll
+                    modalOpenScrollY = window.scrollY;
+                    window.addEventListener('scroll', handleScrollClose, { passive: true });
+                }
+
+                function handleScrollClose() {
+                    // Nếu người dùng cuộn đi hơn 50px thì đóng modal
+                    if (Math.abs(window.scrollY - modalOpenScrollY) > 50) {
+                        closeVideoModal();
+                    }
                 }
 
                 function closeVideoModal() {
@@ -1702,24 +1732,31 @@
                     const player = document.getElementById('modal-video-player');
 
                     player.pause();
-                    player.src = ''; // Stop downloading/buffering
+                    player.src = '';
 
                     modal.classList.add('opacity-0', 'pointer-events-none');
-                    modalContent.classList.remove('scale-100');
-                    modalContent.classList.add('scale-95');
-                    document.body.classList.remove('overflow-hidden'); // Enable scrolling
+                    modal.classList.remove('modal-active');
+                    modalContent.classList.remove('scale-100', 'translate-y-0');
+                    modalContent.classList.add('scale-95', 'translate-y-4');
+
+                    window.removeEventListener('scroll', handleScrollClose);
                 }
             </script>
 
             <!-- Video Modal -->
             <div id="video-modal" onclick="closeVideoModal()"
-                class="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 cursor-pointer">
+                class="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 cursor-pointer p-4">
 
                 <!-- Modal Content -->
-                <div class="w-full max-w-4xl mx-auto px-4 relative transform scale-95 transition-transform duration-300 cursor-auto"
+                <div class="w-full max-w-4xl mx-auto relative transform scale-95 translate-y-4 transition-all duration-300 cursor-auto"
                     id="video-modal-content" onclick="event.stopPropagation()">
+                    <!-- Nút đóng nổi bật cho mobile -->
+                    <button onclick="closeVideoModal()"
+                        class="absolute -top-12 right-0 sm:-right-12 sm:top-0 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-white flex items-center justify-center transition-all duration-300 border border-white/20">
+                        <span class="material-symbols-outlined text-2xl">close</span>
+                    </button>
                     <video id="modal-video-player"
-                        class="w-full h-auto max-h-[80vh] rounded-2xl shadow-2xl bg-black border border-white/20"
+                        class="w-full h-auto max-h-[80vh] sm:max-h-[85vh] rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.5)] bg-black border border-white/10"
                         controls playsinline></video>
                 </div>
             </div>
@@ -1973,7 +2010,7 @@
                         <!-- New Image Column -->
                         <div
                             class="w-full h-[350px] lg:h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white flex-shrink-0">
-                            <img src="images/cauhoithuonggap.png"
+                            <img src="images/Gemini_Generated_Image_932a65932a65932a.png"
                                 alt="Vietnamese farmer holding Ivy Green Earth SL and Ivy Revive products in a durian orchard"
                                 class="w-full h-full object-cover pointer-events-none">
                         </div>
