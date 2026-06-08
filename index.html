@@ -308,6 +308,8 @@
             const carousel = document.getElementById('hero-carousel');
             const video = document.getElementById('hero-video');
             const dynamicItem = document.getElementById('hero-dynamic-item');
+            const muteToggle = document.getElementById('mute-toggle');
+            const muteIcon = document.getElementById('mute-icon');
 
             const originalContent = `
                 <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight font-medium tracking-wide">
@@ -395,9 +397,17 @@
                                 video.play().catch(e => console.log("Autoplay prevented"));
                             }
                             stopAutoSlide(); // Let video dictate when to switch
+                            if (muteToggle) {
+                                muteToggle.classList.remove('opacity-0', 'pointer-events-none');
+                                muteToggle.classList.add('opacity-100', 'pointer-events-auto');
+                            }
                         } else {
                             video.pause();
                             startAutoSlide(); // Resume timer for images
+                            if (muteToggle) {
+                                muteToggle.classList.add('opacity-0', 'pointer-events-none');
+                                muteToggle.classList.remove('opacity-100', 'pointer-events-auto');
+                            }
                         }
                     } else {
                         startAutoSlide();
@@ -467,6 +477,17 @@
                         showImage(index);
                     });
                 });
+
+                // Mute toggle logic
+                if (muteToggle && video) {
+                    muteToggle.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        video.muted = !video.muted;
+                        if (muteIcon) {
+                            muteIcon.textContent = video.muted ? 'volume_off' : 'volume_up';
+                        }
+                    });
+                }
             }
         });
     </script>
@@ -491,7 +512,7 @@
                         <!-- Carousel Images & Video -->
                         <div id="hero-carousel"
                             class="flex w-full h-full transition-transform duration-500 ease-in-out">
-                            <video id="hero-video" src="images/36mb.mp4" playsinline muted
+                            <video id="hero-video" src="images/36mbfix.mp4" playsinline muted
                                 class="block w-full h-[600px] object-cover flex-shrink-0 transition-transform duration-700 cursor-pointer"></video>
 
                             <img src="images/anhnongdan.JPG"
@@ -502,6 +523,11 @@
                                 class="block w-full h-[600px] object-cover flex-shrink-0 hover:scale-105 transition-transform duration-700 cursor-pointer"
                                 alt="Phân vi sinh cho cây sầu riêng IVY Micro ngăn ngừa thối rễ Phytophthora" />
                         </div>
+
+                        <!-- Mute/Unmute Toggle -->
+                        <button id="mute-toggle" class="absolute top-4 right-4 z-30 bg-black/30 hover:bg-black/50 backdrop-blur-md border border-white/20 text-white w-10 h-10 rounded-full transition-all duration-300 opacity-100 pointer-events-auto flex items-center justify-center shadow-lg group">
+                            <span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform" id="mute-icon">volume_off</span>
+                        </button>
 
                         <!-- Carousel Indicators -->
                         <div class="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-20">
@@ -1477,12 +1503,12 @@
                             <div
                                 class="w-[85vw] max-w-[340px] sm:max-w-none sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] flex-shrink-0 snap-center sm:snap-start bg-white rounded-[24px] sm:rounded-[32px] border border-gray-100 shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 flex flex-col h-auto group overflow-hidden relative">
                                 <div class="w-full aspect-square overflow-hidden relative group/video">
-                                    <video src="images/86mb.mp4"
+                                    <video src="images/86mbfix.mp4"
                                         class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-700"
                                         muted playsinline></video>
                                     <div
                                         class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-100 sm:opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <button onclick="openVideoModal('images/86mb.mp4')"
+                                        <button onclick="openVideoModal('images/86mbfix.mp4')"
                                             class="bg-white/20 backdrop-blur-md border border-white/40 text-white rounded-full px-5 py-2.5 sm:px-6 sm:py-2 flex items-center gap-2 hover:bg-white/30 hover:scale-105 transition-all shadow-[0_0_15px_rgba(0,0,0,0.2)]">
                                             <span
                                                 class="material-symbols-outlined text-3xl drop-shadow-md">play_circle</span>
