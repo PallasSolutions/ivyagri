@@ -342,7 +342,7 @@
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 sm:p-8 rounded-[28px] sm:rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 transform-gpu hover:bg-white/15 cursor-default flex flex-col h-full justify-center">
                     <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-400 mb-4 sm:mb-6 leading-tight drop-shadow-sm">Câu chuyện phục hồi kỳ diệu</h2>
                     <p class="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed font-medium">
-                        Năm 2019, vườn sầu riêng của <strong>anh Nguyễn Văn Tư</strong> (Cư M'gar, Đắk Lắk) gần như bỏ cuộc — đất cứng như đá, rễ thối, trái rụng đầy gốc. Sau khi thử chế phẩm vi sinh <strong>Green Earth SL</strong> theo lời khuyên của cán bộ khuyến nông, chỉ sau 2 vụ, đất mềm trở lại, cây phục hồi, vụ 2024 anh thu gần <span class="text-amber-400 font-bold drop-shadow-md text-xl sm:text-2xl">4 tấn</span>.
+                        "Cây ít bệnh hẳn — không còn sì mủ, nứt thân, chết cành. Cả vườn không cây nào thối rễ hay mọt đục. Đất ổn, rễ khoẻ, trái đậu nhiều hơn. Mấy cây nhiễm Paclo nặng mấy mùa trước, giờ vẫn cho trên 100kg/cây, trái đẹp, cơm vàng bột ngọt"
                     </p>
                     <div class="mt-6 ml-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
                         <a class="bg-gradient-to-r from-primary to-emerald-600 hover:from-primary-container hover:to-emerald-500 text-white px-8 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg text-center transition-all active:scale-95 shadow-lg shadow-primary/30 border border-emerald-500/30 flex items-center justify-center" href="#order">Đặt hàng ngay</a>
@@ -448,7 +448,7 @@
                 function handleMouseEnter() {
                     isHovered = true;
                     stopAutoSlide();
-                    if (currentIndex === 0 && video) video.pause();
+                    // Video continues playing on hover
                 }
 
                 function handleMouseLeave() {
@@ -1528,16 +1528,16 @@
                                         <div>
                                             <h3
                                                 class="font-bold text-base sm:text-lg text-slate-900 group-hover:text-primary transition-colors">
-                                                Ông Trần Văn Nam
+                                                Anh Bạc
                                             </h3>
-                                            <p class="text-xs sm:text-sm text-slate-500">Buôn Ma Thuột, Đắk Lắk · 2 ha
+                                            <p class="text-xs sm:text-sm text-slate-500">Tây Ninh
                                             </p>
                                         </div>
                                     </div>
                                     <p class="text-sm sm:text-base text-slate-700 italic flex-grow leading-relaxed">
-                                        "Trước đây vụ nào cũng lo thối rễ, mua thuốc tốn cả chục triệu mà không dứt.
-                                        Dùng Green Earth SL được 3 tháng, đất mềm hẳn, lá xanh trở lại. Vụ vừa rồi đậu
-                                        trái gấp đôi năm ngoái."
+                                        "Cây ít bệnh hẳn — không còn sì mủ, nứt thân, chết cành. Cả vườn không cây nào
+                                        thối rễ hay mọt đục. Đất ổn, rễ khoẻ, trái đậu nhiều hơn. Mấy cây nhiễm Paclo
+                                        nặng mấy mùa trước, giờ vẫn cho trên 100kg/cây, trái đẹp, cơm vàng bột ngọt"
                                     </p>
                                 </div>
                             </div>
@@ -1546,12 +1546,12 @@
                             <div
                                 class="w-[85vw] max-w-[340px] sm:max-w-none sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] flex-shrink-0 snap-center sm:snap-start bg-white rounded-[24px] sm:rounded-[32px] border border-gray-100 shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 flex flex-col h-auto group overflow-hidden relative">
                                 <div class="w-full aspect-square overflow-hidden relative group/video">
-                                    <video src="images/TestVideoLandingPage.mp4"
+                                    <video src="images/VideoLogoIvy.mp4"
                                         class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-700"
                                         muted playsinline></video>
                                     <div
                                         class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-100 sm:opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <button onclick="openVideoModal('images/TestVideoLandingPage.mp4')"
+                                        <button onclick="openVideoModal('images/VideoLogoIvy.mp4')"
                                             class="bg-white/20 backdrop-blur-md border border-white/40 text-white rounded-full px-5 py-2.5 sm:px-6 sm:py-2 flex items-center gap-2 hover:bg-white/30 hover:scale-105 transition-all shadow-[0_0_15px_rgba(0,0,0,0.2)]">
                                             <span
                                                 class="material-symbols-outlined text-3xl drop-shadow-md">play_circle</span>
@@ -1586,12 +1586,12 @@
                             <div
                                 class="w-[85vw] max-w-[340px] sm:max-w-none sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] flex-shrink-0 snap-center sm:snap-start bg-white rounded-[24px] sm:rounded-[32px] border border-gray-100 shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 flex flex-col h-auto group overflow-hidden relative">
                                 <div class="w-full aspect-square overflow-hidden relative group/video">
-                                    <video src="images/TestVideoLandingPage.mp4"
+                                    <video src="images/VideoLogoIvy.mp4"
                                         class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-700"
                                         muted playsinline></video>
                                     <div
                                         class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-100 sm:opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <button onclick="openVideoModal('images/TestVideoLandingPage.mp4')"
+                                        <button onclick="openVideoModal('images/VideoLogoIvy.mp4')"
                                             class="bg-white/20 backdrop-blur-md border border-white/40 text-white rounded-full px-5 py-2.5 sm:px-6 sm:py-2 flex items-center gap-2 hover:bg-white/30 hover:scale-105 transition-all shadow-[0_0_15px_rgba(0,0,0,0.2)]">
                                             <span
                                                 class="material-symbols-outlined text-3xl drop-shadow-md">play_circle</span>
@@ -1625,12 +1625,12 @@
                             <div
                                 class="w-[85vw] max-w-[340px] sm:max-w-none sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] flex-shrink-0 snap-center sm:snap-start bg-white rounded-[24px] sm:rounded-[32px] border border-gray-100 shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 flex flex-col h-auto group overflow-hidden relative">
                                 <div class="w-full aspect-square overflow-hidden relative group/video">
-                                    <video src="images/TestVideoLandingPage.mp4"
+                                    <video src="images/VideoLogoIvy.mp4"
                                         class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-700"
                                         muted playsinline></video>
                                     <div
                                         class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-100 sm:opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <button onclick="openVideoModal('images/TestVideoLandingPage.mp4')"
+                                        <button onclick="openVideoModal('images/VideoLogoIvy.mp4')"
                                             class="bg-white/20 backdrop-blur-md border border-white/40 text-white rounded-full px-5 py-2.5 sm:px-6 sm:py-2 flex items-center gap-2 hover:bg-white/30 hover:scale-105 transition-all shadow-[0_0_15px_rgba(0,0,0,0.2)]">
                                             <span
                                                 class="material-symbols-outlined text-3xl drop-shadow-md">play_circle</span>
@@ -1728,12 +1728,11 @@
                     setTimeout(updateButtons, 300);
                 });
 
-                let modalOpenScrollY = 0;
-
                 function openVideoModal(videoSrc) {
                     const modal = document.getElementById('video-modal');
                     const modalContent = document.getElementById('video-modal-content');
                     const player = document.getElementById('modal-video-player');
+                    const btn = document.getElementById('scrollTop');
 
                     player.src = videoSrc;
                     player.play().catch(e => console.log('Autoplay prevented'));
@@ -1743,15 +1742,9 @@
                     modalContent.classList.remove('scale-95', 'translate-y-4');
                     modalContent.classList.add('scale-100', 'translate-y-0');
 
-                    // Lưu vị trí cuộn hiện tại để kiểm tra scroll
-                    modalOpenScrollY = window.scrollY;
-                    window.addEventListener('scroll', handleScrollClose, { passive: true });
-                }
-
-                function handleScrollClose() {
-                    // Nếu người dùng cuộn đi hơn 50px thì đóng modal
-                    if (Math.abs(window.scrollY - modalOpenScrollY) > 50) {
-                        closeVideoModal();
+                    // Ẩn nút back to top
+                    if (btn) {
+                        btn.classList.add('opacity-0', 'pointer-events-none');
                     }
                 }
 
@@ -1759,6 +1752,7 @@
                     const modal = document.getElementById('video-modal');
                     const modalContent = document.getElementById('video-modal-content');
                     const player = document.getElementById('modal-video-player');
+                    const btn = document.getElementById('scrollTop');
 
                     player.pause();
                     player.src = '';
@@ -1768,7 +1762,10 @@
                     modalContent.classList.remove('scale-100', 'translate-y-0');
                     modalContent.classList.add('scale-95', 'translate-y-4');
 
-                    window.removeEventListener('scroll', handleScrollClose);
+                    // Hiện lại nút back to top nếu đã cuộn qua 500px
+                    if (btn && (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)) {
+                        btn.classList.remove('opacity-0', 'pointer-events-none');
+                    }
                 }
             </script>
 
@@ -1945,9 +1942,7 @@
                             <div
                                 class="bg-amber-50/80 border border-amber-200 rounded-2xl p-4 mb-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
                                 <p class="font-medium text-amber-900 text-base md:text-lg">
-                                    ⚠️ Ưu đãi chỉ áp dụng đến hết ngày <span
-                                        class="font-bold text-red-600">[30/XX]</span> hoặc khi hết 200 can trong đợt
-                                    này.
+                                    ⚠️ "Ưu đãi chỉ áp dụng đến khi hết 200 can trong đợt này"
                                 </p>
                                 <p
                                     class="text-sm font-bold text-emerald-700 bg-emerald-100/60 px-4 py-1.5 rounded-full flex-shrink-0">
@@ -1955,9 +1950,6 @@
                                 </p>
                             </div>
 
-                            <p class="text-center text-slate-500 font-medium mb-6 italic text-sm md:text-base">
-                                Đặt cả 2 kênh song song — không ép nông dân chọn 1 cách
-                            </p>
 
                             <!-- Các nút gọi điện / Zalo -->
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-10">
@@ -1995,26 +1987,22 @@
 
                             <!-- Icons chứng nhận tiện ích dưới cùng form -->
                             <div
-                                class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 text-sm text-slate-600 font-semibold border-t border-slate-100">
+                                class="flex flex-wrap justify-center gap-2 sm:gap-4 pt-4 text-xs sm:text-sm text-slate-600 font-semibold border-t border-slate-100">
                                 <div
-                                    class="flex items-center justify-center gap-2 text-emerald-800 bg-emerald-50/50 py-2 px-3 rounded-xl">
-                                    <span class="material-symbols-outlined text-lg">verified_user</span> Thanh toán khi
-                                    nhận hàng
+                                    class="flex items-center justify-center gap-1.5 sm:gap-2 text-emerald-800 bg-emerald-50/50 py-2 px-3 rounded-xl whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-[16px] sm:text-lg">verified_user</span> Thanh toán khi nhận hàng
                                 </div>
                                 <div
-                                    class="flex items-center justify-center gap-2 text-emerald-800 bg-emerald-50/50 py-2 px-3 rounded-xl">
-                                    <span class="material-symbols-outlined text-lg">published_with_changes</span> Đổi
-                                    trả trong 30 ngày
+                                    class="flex items-center justify-center gap-1.5 sm:gap-2 text-emerald-800 bg-emerald-50/50 py-2 px-3 rounded-xl whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-[16px] sm:text-lg">published_with_changes</span> Đổi trả trong 30 ngày
                                 </div>
                                 <div
-                                    class="flex items-center justify-center gap-2 text-emerald-800 bg-emerald-50/50 py-2 px-3 rounded-xl">
-                                    <span class="material-symbols-outlined text-lg">workspace_premium</span> Hàng chính
-                                    hãng IVY
+                                    class="flex items-center justify-center gap-1.5 sm:gap-2 text-emerald-800 bg-emerald-50/50 py-2 px-3 rounded-xl whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-[16px] sm:text-lg">workspace_premium</span> Hàng chính hãng IVY
                                 </div>
                                 <div
-                                    class="flex items-center justify-center gap-2 text-emerald-800 bg-emerald-50/50 py-2 px-3 rounded-xl">
-                                    <span class="material-symbols-outlined text-lg">support_agent</span> Hỗ trợ kỹ thuật
-                                    miễn phí
+                                    class="flex items-center justify-center gap-1.5 sm:gap-2 text-emerald-800 bg-emerald-50/50 py-2 px-3 rounded-xl whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-[16px] sm:text-lg">support_agent</span> Hỗ trợ kỹ thuật miễn phí
                                 </div>
                             </div>
                         </div>
@@ -2256,8 +2244,12 @@
         window.onscroll = function () {
             const btn = document.getElementById('scrollTop');
             const header = document.querySelector('header');
+            const modal = document.getElementById('video-modal');
 
-            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            // Kiểm tra modal có đang mở không
+            const isModalOpen = modal && modal.classList.contains('modal-active');
+
+            if (!isModalOpen && (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)) {
                 btn.classList.remove('opacity-0', 'pointer-events-none');
             } else {
                 btn.classList.add('opacity-0', 'pointer-events-none');
