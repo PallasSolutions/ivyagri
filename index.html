@@ -157,7 +157,7 @@
 
 <body class="font-body-lg text-body-lg selection:bg-primary selection:text-white overflow-x-hidden">
     <header id="main-header"
-        class="fixed top-0 w-full z-50 bg-gradient-to-b from-black/60 to-transparent border-b border-transparent h-16 md:h-24 transition-all duration-500">
+        class="fixed top-0 w-full z-50 bg-gradient-to-b from-black/60 to-transparent h-16 md:h-24 transition-all duration-500">
         <nav class="max-w-container-max mx-auto px-gutter h-full flex justify-between items-center">
             <div class="group">
                 <a href="#top" class="flex items-center relative">
@@ -230,8 +230,8 @@
 
             if (window.scrollY > triggerPoint || isMobileMenuOpen) {
                 // Đổi nền Header sang trắng mờ và tăng độ cao
-                header.classList.remove('bg-gradient-to-b', 'from-black/60', 'to-transparent', 'bg-transparent', 'border-transparent', 'h-16', 'md:h-24', 'h-24');
-                header.classList.add('bg-white/70', 'backdrop-blur-lg', 'border-gray-200/50', 'shadow-md', 'h-16', 'md:h-20');
+                header.classList.remove('bg-gradient-to-b', 'from-black/60', 'to-transparent', 'bg-transparent', 'h-16', 'md:h-24', 'h-24');
+                header.classList.add('bg-white/70', 'backdrop-blur-lg', 'shadow-md', 'h-16', 'md:h-20');
 
                 // Đổi màu chữ sang màu tối
                 links.forEach(link => {
@@ -250,8 +250,8 @@
 
             } else {
                 // Trả Header về trong suốt và độ cao ban đầu
-                header.classList.add('bg-gradient-to-b', 'from-black/60', 'to-transparent', 'border-transparent', 'h-16', 'md:h-24');
-                header.classList.remove('bg-white/70', 'backdrop-blur-lg', 'border-gray-200/50', 'shadow-md', 'h-16', 'md:h-20', 'h-28', 'h-24');
+                header.classList.add('bg-gradient-to-b', 'from-black/60', 'to-transparent', 'h-16', 'md:h-24');
+                header.classList.remove('bg-white/70', 'backdrop-blur-lg', 'shadow-md', 'h-16', 'md:h-20', 'h-28', 'h-24');
 
                 // Trả màu chữ về trắng
                 links.forEach(link => {
@@ -323,7 +323,7 @@
                 <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight font-medium tracking-wide">
                     Vườn sầu riêng 10 năm <span class="text-amber-400 font-semibold italic drop-shadow-sm">không hóa học</span> — anh Tư Đắk Lắk vẫn thu 4 tấn mỗi vụ
                 </h1>
-                <p class="text-lg md:text-xl mb-8 text-surface-container-low max-w-xl opacity-90 leading-relaxed">
+                <p class="text-lg md:text-xl mb-8 text-surface-container-low max-w-xl opacity-90 leading-relaxed text-justify">
                     "Cứu sống đất chết, diệt sạch mầm bệnh thối rễ Phytophthora và tăng tỷ lệ đậu trái vượt trội cùng anh Tư Đắk Lắk."
                 </p>
                 <div class="grid grid-cols-2 gap-3 mb-6  sm:flex sm:flex-row sm:gap-4 sm:mb-8">
@@ -349,7 +349,7 @@
             const videoContent = `
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 py-5 px-6 sm:p-8 rounded-[28px] sm:rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 transform-gpu hover:bg-white/15 cursor-default flex flex-col h-full justify-center mb-16 md:mb-0">
                     <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-400 mb-3 sm:mb-6 leading-tight drop-shadow-sm">Câu chuyện phục hồi kỳ diệu</h2>
-                    <p class="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed font-medium">
+                    <p class="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed font-medium text-justify">
                         "Cây ít bệnh hẳn — không còn sì mủ, nứt thân, chết cành. Cả vườn không cây nào thối rễ hay mọt đục. Đất ổn, rễ khoẻ, trái đậu nhiều hơn. Mấy cây nhiễm Paclo nặng mấy mùa trước, giờ vẫn cho trên 100kg/cây, trái đẹp, cơm vàng bột ngọt"
                     </p>
                     <div class="mt-4 sm:mt-8 grid grid-cols-2 gap-3 sm:justify-center sm:flex sm:flex-row sm:gap-4">
@@ -501,9 +501,10 @@
     </script>
     <main class="">
         <!-- Hero Section -->
-        <section class="relative min-h-[100vh] flex items-center overflow-hidden bg-hero-pattern pt-28 pb-28 md:pb-12">
+        <section
+            class="relative lg:min-h-screen flex flex-col justify-center overflow-hidden bg-hero-pattern pt-24 pb-8 lg:pt-28 lg:pb-12">
             <div
-                class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+                class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 w-full">
 
                 <!-- BLOCK BÊN PHẢI: NỘI DUNG (HEADLINE, SUB-HEADLINE, CTA, CAM KẾT) -->
                 <div id="hero-dynamic-item"
@@ -585,7 +586,8 @@
                                     đến trái</span>
                             </h2>
 
-                            <div class="text-base md:text-lg text-on-surface-variant space-y-4 mb-8 leading-relaxed">
+                            <div
+                                class="text-base md:text-lg text-on-surface-variant space-y-4 mb-8 leading-relaxed text-justify">
                                 <p>
                                     Năm 2019, vườn sầu riêng của <strong>anh Nguyễn Văn Tư (Cư M'gar, Đắk Lắk)</strong>
                                     gần như bỏ cuộc — đất đai chai cứng như đá, rễ bị thối nghiêm trọng, và trái non
@@ -684,29 +686,29 @@
                                 Đất cứng, bạc màu, rễ không ăn sâu
                             </h3>
 
-                            <p class="text-base md:text-lg text-on-surface-variant mb-6 leading-relaxed">
+                            <p class="text-base md:text-lg text-on-surface-variant mb-6 leading-relaxed text-justify">
                                 Sau nhiều vụ sử dụng phân hóa học, đất mất kết cấu, chai cứng và nghèo dinh dưỡng khiến
                                 bộ
                                 rễ không thể phát triển khỏe mạnh.
                             </p>
 
                             <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Đất chai cứng
                                 </li>
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Ít rễ tơ mới
                                 </li>
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Cây sinh trưởng chậm
                                 </li>
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Hấp thu dinh dưỡng kém
@@ -735,29 +737,29 @@
                                 Thối rễ, vàng lá ngày càng nặng
                             </h3>
 
-                            <p class="text-base md:text-lg text-on-surface-variant mb-6 leading-relaxed">
+                            <p class="text-base md:text-lg text-on-surface-variant mb-6 leading-relaxed text-justify">
                                 Nấm Phytophthora và các mầm bệnh trong đất liên tục phát triển làm cây vàng lá, suy yếu
                                 và
                                 chết dần từ gốc.
                             </p>
 
                             <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Vàng lá kéo dài
                                 </li>
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Thối rễ
                                 </li>
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Cây suy kiệt
                                 </li>
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Tái bệnh liên tục
@@ -799,27 +801,27 @@
                                 Tỷ lệ đậu trái thấp, rụng non nhiều
                             </h3>
 
-                            <p class="text-base md:text-lg text-on-surface-variant mb-6 leading-relaxed">
+                            <p class="text-base md:text-lg text-on-surface-variant mb-6 leading-relaxed text-justify">
                                 Ra hoa nhiều nhưng tỷ lệ đậu trái thấp khiến năng suất không đạt kỳ vọng nghiêm trọng.
                             </p>
 
                             <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Rụng bông
                                 </li>
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Rụng trái non
                                 </li>
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Đậu trái thấp
                                 </li>
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Mất năng suất
@@ -847,28 +849,28 @@
                                 Chi phí thuốc hóa học ngày càng tăng
                             </h3>
 
-                            <p class="text-base md:text-lg text-on-surface-variant mb-6 leading-relaxed">
+                            <p class="text-base md:text-lg text-on-surface-variant mb-6 leading-relaxed text-justify">
                                 Mỗi vụ phải chi hàng chục triệu đồng tiền thuốc nhưng hiệu quả mang lại ngày càng giảm
                                 sút.
                             </p>
 
                             <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Tốn kém chi phí
                                 </li>
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Đất suy thoái
                                 </li>
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Hiệu quả giảm dần
                                 </li>
-                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                <li class="flex items-center gap-3 text-base md:text-lg text-gray-700 font-medium">
                                     <span
                                         class="w-6 h-6 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold text-sm border border-red-100">✕</span>
                                     Lợi nhuận thấp
@@ -909,7 +911,7 @@
                                     Vì sao cây sầu riêng ngày càng khó trồng hơn?
                                 </h2>
                                 <p
-                                    class="text-base md:text-lg text-on-surface-variant leading-relaxed font-medium italic border-l-4 border-primary/30 pl-4 py-1 bg-white/40 rounded-r-xl">
+                                    class="text-base md:text-lg text-on-surface-variant leading-relaxed font-medium italic border-l-4 border-primary/30 pl-4 py-1 bg-white/40 rounded-r-xl text-justify">
                                     "Vấn đề không nằm ở cây — mà nằm ở đất. Hóa chất nông nghiệp dùng liên tục đã tiêu
                                     diệt toàn bộ hệ vi sinh vật có lợi trong đất. Khi vi sinh chết, đất mất khả năng tự
                                     phân giải chất hữu cơ, mầm bệnh không còn đối thủ tự nhiên để kiểm soát — chúng bùng
@@ -1076,7 +1078,7 @@
                                     class="font-extrabold text-gray-900 text-xl md:text-2xl mb-4 group-hover:text-primary transition-colors">
                                     Diệt mầm bệnh trong đất
                                 </h3>
-                                <p class="text-on-surface-variant leading-relaxed text-sm md:text-base">
+                                <p class="text-on-surface-variant leading-relaxed text-sm md:text-base text-justify">
                                     <strong class="text-gray-800">Trichoderma harzianum</strong> và <strong
                                         class="text-gray-800">Bacillus subtilis</strong> tấn công trực tiếp nấm <span
                                         class="underline decoration-red-200 font-medium">Phytophthora, Fusarium</span>
@@ -1105,7 +1107,7 @@
                                     class="font-extrabold text-gray-900 text-xl md:text-2xl mb-4 group-hover:text-primary transition-colors">
                                     Phân giải độc tố &amp; Hóa chất
                                 </h3>
-                                <p class="text-on-surface-variant leading-relaxed text-sm md:text-base">
+                                <p class="text-on-surface-variant leading-relaxed text-sm md:text-base text-justify">
                                     <strong class="text-gray-800">Aspergillus terreus</strong> và <strong
                                         class="text-gray-800">Emericella nidulans</strong> bẻ gãy liên kết hóa học tồn
                                     dư,
@@ -1135,7 +1137,7 @@
                                     class="font-extrabold text-gray-900 text-xl md:text-2xl mb-4 group-hover:text-primary transition-colors">
                                     Phục hồi cấu trúc đất tơi xốp
                                 </h3>
-                                <p class="text-on-surface-variant leading-relaxed text-sm md:text-base">
+                                <p class="text-on-surface-variant leading-relaxed text-sm md:text-base text-justify">
                                     <strong class="text-gray-800">Paecilomyces lilacinus</strong> và <strong
                                         class="text-gray-800">Chaetomium spp</strong> tạo mùn sinh học hữu cơ, liên kết
                                     các
@@ -1156,7 +1158,7 @@
 
         <div data-aos="fade-left">
 
-            <section class="py-16 md:py-24 bg-white overflow-hidden" id="ket-qua-huong-dan">
+            <section class="pt-16 pb-4 md:pt-24 md:pb-8 bg-white overflow-hidden" id="ket-qua-huong-dan">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                     <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -1186,9 +1188,7 @@
                                     <img src="https://hoanongkimnguyen.vn/assets/kim-images/stage-hoan-thien-chat-luong-trai.jpg"
                                         alt="Kết quả sầu riêng đạt năng suất cao"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                                    <div
-                                        class="absolute bottom-3 left-3 bg-slate-900/70 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">
-                                        Hình ảnh thực tế từ nhà vườn</div>
+
                                 </div>
 
                                 <ul class="space-y-3.5 text-slate-700 text-sm md:text-base">
@@ -1225,7 +1225,7 @@
                                 class="bg-emerald-600 text-white rounded-2xl p-5 border border-emerald-700 shadow-inner mt-6">
                                 <p class="text-xs uppercase tracking-wider text-emerald-200 font-bold mb-1">🔥 Siêu tiết
                                     kiệm chi phí</p>
-                                <p class="text-sm md:text-base font-medium leading-relaxed">
+                                <p class="text-sm md:text-base font-medium leading-relaxed text-justify">
                                     "1 lít Green Earth SL pha được 1.000 lít nước — xử lý 500–1.000 m² vườn. Chi phí chỉ
                                     bằng 1/5 thuốc hóa học, hiệu quả kéo dài cả vụ."
                                 </p>
@@ -1249,9 +1249,7 @@
                                     <img src="https://hoanongkimnguyen.vn/assets/kim-images/stage-dau-trai-giu-trai.jpg"
                                         alt="Hướng dẫn phun tưới đẫm gốc sầu riêng"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                                    <div
-                                        class="absolute bottom-3 left-3 bg-slate-900/70 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">
-                                        Thao tác đơn giản hóa</div>
+
                                 </div>
 
                                 <div class="space-y-4 text-sm md:text-base">
@@ -1288,7 +1286,7 @@
                                 <div class="text-2xl mt-0.5">⚠️</div>
                                 <div class="text-xs md:text-sm space-y-1">
                                     <p class="font-bold uppercase tracking-wider text-amber-800">Lưu ý quan trọng</p>
-                                    <p class="text-amber-950/80 leading-relaxed">
+                                    <p class="text-amber-950/80 leading-relaxed text-justify">
                                         <span class="font-semibold underline">Không</span> trộn chung với thuốc diệt
                                         khuẩn
                                         hoặc vôi. Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp. Sản phẩm
@@ -1306,7 +1304,7 @@
         </div>
         <!-- Product & Ingredients -->
         <div data-aos="zoom-in">
-            <section class="pt-8 pb-16  lg:pb-20 bg-surface-container-highest" id="san-pham">
+            <section class="mt-20 pb-16 lg:pb-20 bg-surface-container-highest" id="san-pham">
                 <div class="max-w-container-max mx-auto px-gutter">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center mb-12">
                         <!-- IMAGE -->
@@ -1330,7 +1328,7 @@
                                 Mật độ ≥ 1 × 10⁸ CFU/ml – Chuẩn quốc tế
                             </p>
 
-                            <p class="text-lg text-on-surface-variant mb-8">
+                            <p class="text-lg text-on-surface-variant mb-8 text-justify">
                                 Hỗ trợ phục hồi bộ rễ, cải tạo đất, kiểm soát nấm bệnh,
                                 tăng khả năng hấp thu dinh dưỡng và giảm tồn dư hóa chất
                                 trong đất canh tác.
@@ -1349,24 +1347,25 @@
                             </div>
 
                             <!-- PHÁP LÝ -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div
+                                class="flex flex-nowrap overflow-x-auto md:grid md:grid-cols-2 gap-4 pb-4 md:pb-0 snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                                 <div
-                                    class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    class="w-[85vw] sm:w-[320px] shrink-0 snap-center md:w-auto p-4 rounded-2xl bg-emerald-50 border border-emerald-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                                     <div class="font-bold text-emerald-700 mb-2">Số lưu hành</div>
                                     <div class="text-sm">20.3511.01 – HC5/VC</div>
                                 </div>
                                 <div
-                                    class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    class="w-[85vw] sm:w-[320px] shrink-0 snap-center md:w-auto p-4 rounded-2xl bg-emerald-50 border border-emerald-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                                     <div class="font-bold text-emerald-700 mb-2">TCCS</div>
                                     <div class="text-sm">668/TCCS – NS</div>
                                 </div>
                                 <div
-                                    class="p-4 rounded-2xl bg-amber-50 border border-amber-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    class="w-[85vw] sm:w-[320px] shrink-0 snap-center md:w-auto p-4 rounded-2xl bg-amber-50 border border-amber-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                                     <div class="font-bold text-amber-700 mb-2">Đăng ký & sản xuất</div>
                                     <div class="text-sm">Công ty TNHH Nông Sinh, Hà Nội</div>
                                 </div>
                                 <div
-                                    class="p-4 rounded-2xl bg-blue-50 border border-blue-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    class="w-[85vw] sm:w-[320px] shrink-0 snap-center md:w-auto p-4 rounded-2xl bg-blue-50 border border-blue-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                                     <div class="font-bold text-blue-700 mb-2">Nhãn hàng độc quyền</div>
                                     <div class="text-sm">Công ty TNHH Nông nghiệp IVY</div>
                                 </div>
@@ -1590,7 +1589,8 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <p class="text-sm sm:text-base text-slate-700 italic flex-grow leading-relaxed">
+                                    <p
+                                        class="text-sm sm:text-base text-slate-700 italic flex-grow leading-relaxed text-justify">
                                         "Cây ít bệnh hẳn — không còn sì mủ, nứt thân, chết cành. Cả vườn không cây nào
                                         thối rễ hay mọt đục. Đất ổn, rễ khoẻ, trái đậu nhiều hơn. Mấy cây nhiễm Paclo
                                         nặng mấy mùa trước, giờ vẫn cho trên 100kg/cây, trái đẹp, cơm vàng bột ngọt"
@@ -1630,7 +1630,8 @@
                                                 Ri6</p>
                                         </div>
                                     </div>
-                                    <p class="text-sm sm:text-base text-slate-700 italic flex-grow leading-relaxed">
+                                    <p
+                                        class="text-sm sm:text-base text-slate-700 italic flex-grow leading-relaxed text-justify">
                                         "Vườn nhà tôi đất cứng 5 năm, xử lý bằng đủ loại mà không cải thiện. Sau 2 vụ
                                         dùng IVY Micro, đất tơi lại, múi sầu riêng cũng dày hơn, thương lái trả giá cao
                                         hơn 10%."
@@ -1669,7 +1670,8 @@
                                             <p class="text-xs sm:text-sm text-slate-500">Xuân Lộc, Đồng Nai · 3 ha</p>
                                         </div>
                                     </div>
-                                    <p class="text-sm sm:text-base text-slate-700 italic flex-grow leading-relaxed">
+                                    <p
+                                        class="text-sm sm:text-base text-slate-700 italic flex-grow leading-relaxed text-justify">
                                         "Tôi nghi ngờ lắm vì đã thử nhiều loại vi sinh rồi. Nhưng sau 6 tháng, tôi giảm
                                         được hơn nửa chi phí thuốc hóa học mà vườn còn khỏe hơn. Mùa sau tôi sẽ mở rộng
                                         ra toàn bộ vườn."
@@ -1708,7 +1710,8 @@
                                             <p class="text-xs sm:text-sm text-slate-500">Bảo Lộc, Lâm Đồng · 1,2 ha</p>
                                         </div>
                                     </div>
-                                    <p class="text-sm sm:text-base text-slate-700 italic flex-grow leading-relaxed">
+                                    <p
+                                        class="text-sm sm:text-base text-slate-700 italic flex-grow leading-relaxed text-justify">
                                         "Đất ở đây dốc, dễ xói mòn và bạc màu. Từ ngày xài IVY, rễ cây bám chặt, lá xanh
                                         đen, bóng mượt. Cây khỏe nên kháng bệnh tốt hẳn, tôi đỡ lo mỗi đợt mưa dầm."
                                     </p>
@@ -1888,13 +1891,14 @@
                                     <!-- Khối giá tiền và nhãn tiết kiệm căn giữa -->
                                     <div class="flex flex-col items-center justify-center gap-4 w-full">
                                         <!-- Hàng giá tiền -->
-                                        <div class="flex items-center justify-center gap-5 flex-wrap w-full">
+                                        <div
+                                            class="flex items-baseline justify-center gap-3 md:gap-5 w-full whitespace-nowrap">
                                             <span
-                                                class="text-xl md:text-2xl text-white/40 line-through font-medium tracking-wide">
+                                                class="text-lg md:text-2xl text-white/40 line-through font-medium tracking-wide">
                                                 2.000.000đ
                                             </span>
                                             <div
-                                                class="text-4xl md:text-5xl lg:text-6xl font-black text-yellow-400 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] tracking-tight">
+                                                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-yellow-400 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] tracking-tight">
                                                 1.200.000đ
                                             </div>
                                         </div>
@@ -1905,7 +1909,7 @@
 
                                             <!-- Nhãn tiết kiệm chính -->
                                             <span
-                                                class="relative inline-flex items-center gap-2 bg-gradient-to-r from-red-600 via-orange-600 to-red-600 text-white text-base md:text-lg font-black px-5 py-2.5 rounded-2xl uppercase tracking-wide shadow-[0_4px_20px_rgba(220,38,38,0.4)] border-2 border-yellow-300 animate-pulse transform hover:scale-105 transition-transform">
+                                                class="relative inline-flex items-center gap-1.5 md:gap-2 bg-gradient-to-r from-red-600 via-orange-600 to-red-600 text-white text-sm md:text-lg font-black px-3 md:px-5 py-2 md:py-2.5 rounded-2xl uppercase tracking-wide shadow-[0_4px_20px_rgba(220,38,38,0.4)] border-2 border-yellow-300 animate-pulse transform hover:scale-105 transition-transform whitespace-nowrap">
                                                 <span
                                                     class="bg-yellow-400 text-red-700 rounded-lg px-2 py-0.5 text-xs font-black tracking-tighter">
                                                     ƯU ĐÃI
@@ -1924,9 +1928,9 @@
                                                 class="material-symbols-outlined text-amber-400 flex-shrink-0 bg-amber-400/20 p-1 rounded-full">card_giftcard</span>
                                             <div>
                                                 <p
-                                                    class="font-bold text-xl text-yellow-400 mb-1 flex items-center gap-2">
+                                                    class="font-bold text-lg md:text-xl text-yellow-400 mb-1 leading-tight">
                                                     TẶNG KÈM KHI MUA 1 CAN: <span
-                                                        class="bg-red-500 text-white text-xs font-black px-2 py-0.5 rounded uppercase">Tặng
+                                                        class="inline-block bg-red-500 text-white text-xs font-black px-2 py-0.5 rounded uppercase align-middle ml-1 whitespace-nowrap">Tặng
                                                         miễn phí</span>
                                                 </p>
                                                 <p class="font-bold text-lg text-white">5 gói phân bón hữu cơ IVY REVIVE
@@ -1946,7 +1950,7 @@
                                                         <span>Dùng song song với <strong class="text-amber-300">IVY
                                                                 MICRO</strong> để tối đa hiệu quả.</span>
                                                     </li>
-                                                </ul>>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -1977,12 +1981,12 @@
                         </div>
 
                         <!-- VÙNG HÌNH ẢNH (Bên Phải) -->
-                        <div class="lg:w-5/12 w-full min-h-[350px] lg:min-h-0 relative">
+                        <div class="lg:w-5/12 w-full relative">
                             <div
-                                class="absolute inset-0 border border-white/10 rounded-[32px] pointer-events-none z-10 m-2">
+                                class="hidden md:block absolute inset-0 border border-white/10 rounded-[32px] pointer-events-none z-10 m-2">
                             </div>
                             <img src="images/anhnongdan.JPG" alt="Nông dân tin dùng"
-                                class="w-full h-full object-cover rounded-[32px] shadow-2xl border-4 border-white/5">
+                                class="w-full h-auto lg:h-full object-cover rounded-[32px] shadow-2xl border-4 border-white/5">
                         </div>
 
                     </div>
@@ -2040,35 +2044,32 @@
                                 <h4 class="text-xs font-bold tracking-widest text-slate-400 uppercase mb-3">Cam kết đảo
                                     ngược rủi ro từ IVY</h4>
                                 <p
-                                    class="text-slate-700 font-medium italic bg-slate-50 p-5 rounded-2xl border border-slate-200/60 leading-relaxed text-base">
+                                    class="text-slate-700 font-medium italic bg-slate-50 p-5 rounded-2xl border border-slate-200/60 leading-relaxed text-base text-justify md:text-center">
                                     "Dùng thử 30 ngày — không thấy đất cải thiện, hoàn 100% tiền, không hỏi lý do. Chúng
                                     tôi chắc chắn về điều này."
                                 </p>
                             </div>
 
                             <!-- Icons chứng nhận tiện ích dưới cùng form -->
-                            <div
-                                class="flex flex-wrap justify-center gap-2 sm:gap-4 pt-4 text-xs sm:text-sm text-slate-600 font-semibold border-t border-slate-100">
+                            <div class="flex flex-col sm:flex-row sm:flex-wrap gap-3 pt-6 border-t border-slate-100">
                                 <div
-                                    class="flex items-center justify-center gap-1.5 sm:gap-2 text-emerald-800 bg-emerald-50/50 py-2 px-3 rounded-xl whitespace-nowrap">
-                                    <span class="material-symbols-outlined text-[16px] sm:text-lg">verified_user</span>
+                                    class="inline-flex items-center gap-2 bg-emerald-50/80 text-emerald-800 py-2 px-4 rounded-full text-sm font-medium w-fit border border-emerald-100/50">
+                                    <span class="material-symbols-outlined text-[18px]">verified_user</span>
                                     Thanh toán khi nhận hàng
                                 </div>
                                 <div
-                                    class="flex items-center justify-center gap-1.5 sm:gap-2 text-emerald-800 bg-emerald-50/50 py-2 px-3 rounded-xl whitespace-nowrap">
-                                    <span
-                                        class="material-symbols-outlined text-[16px] sm:text-lg">published_with_changes</span>
+                                    class="inline-flex items-center gap-2 bg-emerald-50/80 text-emerald-800 py-2 px-4 rounded-full text-sm font-medium w-fit border border-emerald-100/50">
+                                    <span class="material-symbols-outlined text-[18px]">published_with_changes</span>
                                     Đổi trả trong 30 ngày
                                 </div>
                                 <div
-                                    class="flex items-center justify-center gap-1.5 sm:gap-2 text-emerald-800 bg-emerald-50/50 py-2 px-3 rounded-xl whitespace-nowrap">
-                                    <span
-                                        class="material-symbols-outlined text-[16px] sm:text-lg">workspace_premium</span>
+                                    class="inline-flex items-center gap-2 bg-emerald-50/80 text-emerald-800 py-2 px-4 rounded-full text-sm font-medium w-fit border border-emerald-100/50">
+                                    <span class="material-symbols-outlined text-[18px]">workspace_premium</span>
                                     Hàng chính hãng IVY
                                 </div>
                                 <div
-                                    class="flex items-center justify-center gap-1.5 sm:gap-2 text-emerald-800 bg-emerald-50/50 py-2 px-3 rounded-xl whitespace-nowrap">
-                                    <span class="material-symbols-outlined text-[16px] sm:text-lg">support_agent</span>
+                                    class="inline-flex items-center gap-2 bg-emerald-50/80 text-emerald-800 py-2 px-4 rounded-full text-sm font-medium w-fit border border-emerald-100/50">
+                                    <span class="material-symbols-outlined text-[18px]">support_agent</span>
                                     Hỗ trợ kỹ thuật miễn phí
                                 </div>
                             </div>
@@ -2079,10 +2080,10 @@
         </div>
         <!-- FAQ Section -->
         <div data-aos="zoom-in">
-            <section class="py-section-gap-desktop bg-surface text-on-surface">
+            <section class="py-12 lg:py-24 bg-surface text-on-surface">
                 <div class="max-w-7xl mx-auto px-gutter">
                     <!-- Title row, full width to prevent wrapping -->
-                    <div class="w-full text-center mb-16">
+                    <div class="w-full text-center mb-10 lg:mb-16">
                         <h2 class="font-headline-md text-3xl text-primary uppercase tracking-wide font-bold">
                             Những câu hỏi nông dân hay hỏi nhất
                         </h2>
