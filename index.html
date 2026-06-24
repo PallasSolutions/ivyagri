@@ -2205,70 +2205,178 @@
     </main>
     <footer id="lien-he" class="bg-gradient-to-br from-green-600 to-emerald-800 text-on-primary">
         <div class="max-w-container-max mx-auto px-gutter py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+
+            <!-- Company -->
             <div>
                 <div class="font-headline-md text-3xl font-bold text-white mb-6">IVY AGRI</div>
                 <p class="text-white/80 mb-6 leading-relaxed">
-                    Tiên phong giải pháp vi sinh nông nghiệp bền vững tại Việt Nam. Mang lại sự thịnh vượng cho nhà vườn
-                    sầu riêng.
+                    Tiên phong giải pháp vi sinh nông nghiệp bền vững tại Việt Nam.
+                    Mang lại sự thịnh vượng cho nhà vườn sầu riêng.
                 </p>
+
                 <div class="flex gap-4">
                     <a class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-all shadow-sm"
-                        href="#"><span class="material-symbols-outlined">language</span></a>
+                        href="#">
+                        <span class="material-symbols-outlined">language</span>
+                    </a>
+
                     <a class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-all shadow-sm"
-                        href="#"><span class="material-symbols-outlined">play_circle</span></a>
+                        href="#">
+                        <span class="material-symbols-outlined">play_circle</span>
+                    </a>
                 </div>
             </div>
+
+            <!-- Contact -->
             <div>
                 <h4 class="font-bold text-xl mb-6 text-white">Liên Hệ</h4>
+
                 <ul class="space-y-4 text-white/80">
+
                     <li>
                         <a href="https://maps.google.com/?q=62+Đường+1F,+Khu+dân+cư+Melosa,+Phường+Long+Trường,+Thành+phố+Thủ+Đức,+TP.HCM"
                             target="_blank" rel="noopener noreferrer"
                             class="flex gap-3 group hover:text-primary-fixed transition-colors">
+
                             <span
-                                class="material-symbols-outlined text-primary-fixed group-hover:scale-110 transition-transform">location_on</span>
-                            62 đường 1F, Khu dân cư Melosa, Phường Long Trường, Thành phố Hồ Chí Minh
+                                class="material-symbols-outlined text-primary-fixed group-hover:scale-110 transition-transform">
+                                location_on
+                            </span>
+
+                            62 đường 1F, Khu dân cư Melosa, Phường Long Trường,
+                            Thành phố Hồ Chí Minh
                         </a>
                     </li>
+
                     <li>
                         <a href="tel:0972912952" class="flex gap-3 group hover:text-primary-fixed transition-colors">
+
                             <span
-                                class="material-symbols-outlined text-primary-fixed group-hover:scale-110 transition-transform">call</span>
+                                class="material-symbols-outlined text-primary-fixed group-hover:scale-110 transition-transform">
+                                call
+                            </span>
+
                             Hotline: 0972.912.952
                         </a>
                     </li>
+
                     <li>
                         <a href="https://zalo.me/0972912952" target="_blank" rel="noopener noreferrer"
                             class="flex gap-3 group hover:text-primary-fixed transition-colors">
+
                             <span
-                                class="material-symbols-outlined text-primary-fixed group-hover:scale-110 transition-transform">chat</span>
+                                class="material-symbols-outlined text-primary-fixed group-hover:scale-110 transition-transform">
+                                chat
+                            </span>
+
                             Zalo: 0972.912.952
                         </a>
                     </li>
+
                     <li>
                         <a href="mailto:info@ivyagri.vn"
                             class="flex gap-3 group hover:text-primary-fixed transition-colors">
+
                             <span
-                                class="material-symbols-outlined text-primary-fixed group-hover:scale-110 transition-transform">mail</span>
+                                class="material-symbols-outlined text-primary-fixed group-hover:scale-110 transition-transform">
+                                mail
+                            </span>
+
                             info@ivyagri.vn
                         </a>
                     </li>
+
                 </ul>
             </div>
+
+            <!-- Policy -->
             <div>
                 <h4 class="font-bold text-xl mb-6 text-white">Chính Sách</h4>
+
                 <ul class="space-y-4 text-white/80">
-                    <li><a class="hover:text-primary-fixed transition-all" href="#">Chính sách bảo hành</a></li>
-                    <li><a class="hover:text-primary-fixed transition-all" href="#">Chính sách đổi trả</a></li>
-                    <li><a class="hover:text-primary-fixed transition-all" href="#">Vận chuyển &amp; Thanh toán</a></li>
-                    <li><a class="hover:text-primary-fixed transition-all" href="#">Bảo mật thông tin</a></li>
+
+                    <li>
+                        <button id="openWarrantyModal" class="hover:text-primary-fixed transition-all text-left">
+                            Chính sách bảo hành
+                        </button>
+                    </li>
+
+                    <li>
+                        <a class="hover:text-primary-fixed transition-all" href="#">
+                            Chính sách đổi trả
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="hover:text-primary-fixed transition-all" href="#">
+                            Vận chuyển & Thanh toán
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="hover:text-primary-fixed transition-all" href="#">
+                            Bảo mật thông tin
+                        </a>
+                    </li>
+
                 </ul>
             </div>
+
         </div>
+
         <div class="border-t border-white/20 py-8 text-center text-white/60 text-sm">
-            © 2024 IVY AGRI. All rights reserved.
+            © 2026 IVY AGRI. All rights reserved.
         </div>
     </footer>
+    <!-- WARRANTY MODAL -->
+    <div id="warrantyModal" class="fixed inset-0 z-[9999] hidden items-center justify-center">
+
+        <!-- Overlay -->
+        <div id="modalOverlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+        <!-- Content -->
+        <div
+            class="relative bg-white rounded-3xl shadow-2xl w-[92%] max-w-4xl max-h-[85vh] overflow-y-auto p-8 md:p-10 animate-modal">
+
+            <button id="closeWarrantyModal"
+                class="absolute top-5 right-5 text-gray-500 hover:text-red-500 transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+
+            <h2 class="text-center text-3xl font-bold text-green-700 mb-8">
+                CHÍNH SÁCH BẢO HÀNH
+            </h2>
+
+            <div class="text-gray-700 leading-relaxed space-y-5 text-align: justify">
+
+                <ul class="list-disc pl-6 space-y-4">
+
+                    <li>
+                        <strong>Cam kết chính hãng:</strong>
+                        Đảm bảo 100% phân bón có nguồn gốc xuất xứ rõ ràng,
+                        có đầy đủ giấy phép lưu hành và chứng nhận hợp quy của cơ quan quản lý.
+                    </li>
+
+                    <li>
+                        <strong>Bảo hành thành phần:</strong>
+                        Cam kết thành phần dinh dưỡng (NPK, trung vi lượng,
+                        hữu cơ) đúng chuẩn xác như thông số in trên bao bì. Tuyệt đối không chứa chất cấm hay pha trộn
+                        tạp chất gây hại cho đất và rễ sầu riêng.
+                    </li>
+
+                    <li>
+                        <strong>Điều kiện hiệu lực:</strong>
+                        Chính sách này có tác dụng trong suốt thời hạn sử dụng của sản phẩm, với điều kiện nhà vườn bảo
+                        quản phân bón đúng theo hướng dẫn (nơi khô ráo, thoáng mát, không bị ẩm ướt).
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
     <!-- Floating Buttons (Mobile Only) -->
     <div class="fixed bottom-4 left-4 right-4 md:hidden z-[60]">
         <div
@@ -2325,6 +2433,36 @@
             duration: 800, // thời gian chạy hiệu ứng (ms)
             once: true,    // chỉ chạy hiệu ứng 1 lần khi cuộn tới
             offset: 100    // khoảng cách cuộn (px) trước khi hiệu ứng kích hoạt
+        });
+
+        // Xử lý logic cho Warranty Modal
+        document.addEventListener('DOMContentLoaded', function () {
+            const warrantyModal = document.getElementById('warrantyModal');
+            const openWarrantyModalBtn = document.getElementById('openWarrantyModal');
+            const closeWarrantyModalBtn = document.getElementById('closeWarrantyModal');
+            const modalOverlay = document.getElementById('modalOverlay');
+
+            if (warrantyModal && openWarrantyModalBtn) {
+                openWarrantyModalBtn.addEventListener('click', () => {
+                    warrantyModal.classList.remove('hidden');
+                    warrantyModal.classList.add('flex');
+                });
+            }
+
+            const closeWarranty = () => {
+                if (warrantyModal) {
+                    warrantyModal.classList.add('hidden');
+                    warrantyModal.classList.remove('flex');
+                }
+            };
+
+            if (closeWarrantyModalBtn) {
+                closeWarrantyModalBtn.addEventListener('click', closeWarranty);
+            }
+
+            if (modalOverlay) {
+                modalOverlay.addEventListener('click', closeWarranty);
+            }
         });
     </script>
 </body>
