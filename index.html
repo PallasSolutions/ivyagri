@@ -501,24 +501,22 @@
     </script>
     <main class="">
         <!-- Hero Section -->
-        <section
+        <!-- <section
             class="relative lg:min-h-screen flex flex-col justify-center overflow-hidden bg-hero-pattern pt-24 pb-8 lg:pt-28 lg:pb-12">
             <div
                 class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 w-full">
 
-                <!-- BLOCK BÊN PHẢI: NỘI DUNG (HEADLINE, SUB-HEADLINE, CTA, CAM KẾT) -->
                 <div id="hero-dynamic-item"
                     class="text-white order-2 lg:order-2 transition-opacity duration-500 opacity-100 lg:min-h-[480px] flex flex-col justify-center">
-                    <!-- JS will inject content here -->
+
                 </div>
 
-                <!-- BLOCK BÊN TRÁI: VISUAL (SLIDER/CAROUSEL HÌNH ẢNH) -->
-                <!-- Đã thêm class `lg:block` và điều chỉnh layout để hoạt động tối ưu trên mobile nếu cần bật -->
+
                 <div class="flex justify-center items-center relative order-1 lg:order-1 w-full">
                     <div
                         class="relative w-full max-w-[580px] aspect-[4/3] sm:aspect-square lg:aspect-auto lg:h-[600px] rounded-3xl overflow-hidden border-4 border-white/20 shadow-2xl">
 
-                        <!-- Carousel Images & Video -->
+
                         <div id="hero-carousel"
                             class="flex w-full h-full transition-transform duration-500 ease-in-out">
                             <video id="hero-video" src="images/36mbfix.mp4" playsinline muted
@@ -533,7 +531,7 @@
                                 alt="Phân vi sinh cho cây sầu riêng IVY Micro ngăn ngừa thối rễ Phytophthora" />
                         </div>
 
-                        <!-- Mute/Unmute Toggle -->
+
                         <button id="mute-toggle"
                             class="absolute top-4 right-4 z-30 bg-black/30 hover:bg-black/50 backdrop-blur-md border border-white/20 text-white w-10 h-10 rounded-full transition-all duration-300 opacity-100 pointer-events-auto flex items-center justify-center shadow-lg group">
                             <span
@@ -541,7 +539,7 @@
                                 id="mute-icon">volume_off</span>
                         </button>
 
-                        <!-- Carousel Indicators -->
+
                         <div class="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-20">
                             <button
                                 class="w-3 h-3 rounded-full bg-white scale-125 transition-all duration-300 carousel-dot shadow-md"
@@ -552,6 +550,47 @@
                             <button
                                 class="w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-300 carousel-dot shadow-md"
                                 data-index="2" aria-label="Go to slide 3"></button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section> -->
+
+        <section
+            class="relative lg:min-h-screen flex flex-col justify-center overflow-hidden bg-hero-pattern pt-24 pb-8 lg:pt-28 lg:pb-12">
+            <div
+                class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 w-full">
+
+                <div id="hero-dynamic-item"
+                    class="text-white order-2 lg:order-2 transition-opacity duration-500 opacity-100 lg:min-h-[480px] flex flex-col justify-center">
+                </div>
+
+                <div class="flex justify-center items-center relative order-1 lg:order-1 w-full">
+                    <div
+                        class="relative w-full max-w-[580px] aspect-[4/3] sm:aspect-square lg:aspect-auto lg:h-[600px] rounded-3xl overflow-hidden border-4 border-white/20 shadow-2xl">
+
+                        <div id="hero-carousel"
+                            class="flex w-full h-full transition-transform duration-500 ease-in-out">
+
+                            <video id="hero-video" src="images/36mbfix.mp4" playsinline muted
+                                class="block w-full h-full object-cover flex-shrink-0 transition-transform duration-700 cursor-pointer"></video>
+
+                        </div>
+
+                        <button id="mute-toggle"
+                            class="absolute top-4 right-4 z-30 bg-black/30 hover:bg-black/50 backdrop-blur-md border border-white/20 text-white w-10 h-10 rounded-full transition-all duration-300 opacity-100 pointer-events-auto flex items-center justify-center shadow-lg group">
+                            <span
+                                class="material-symbols-outlined text-[20px] leading-none flex items-center justify-center w-full h-full group-hover:scale-110 transition-transform"
+                                id="mute-icon">volume_off</span>
+                        </button>
+
+                        <div class="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-20">
+                            <button
+                                class="w-3 h-3 rounded-full bg-white scale-125 transition-all duration-300 carousel-dot shadow-md"
+                                data-index="0" aria-label="Go to slide 1"></button>
+
                         </div>
 
                     </div>
@@ -589,14 +628,29 @@
                             <div
                                 class="text-base md:text-lg text-on-surface-variant space-y-5 mb-8 leading-relaxed text-justify">
                                 <p>
-                                    Trước đây, vườn sầu riêng của anh Bạc liên tục đối mặt với <strong class="text-red-500 font-semibold">thối rễ vàng lá, nứt thân xì mủ, mọt đục thân đục cành</strong> - cây yếu, đất mất cân bằng, trái non rụng mỗi khi mưa lớn. Mấy cây bị <strong class="text-amber-600 font-semibold">nhiễm Paclo nặng</strong> càng khiến anh thêm lo khi năng suất sụt giảm rõ rệt qua từng vụ.
+                                    Trước đây, vườn sầu riêng của anh Bạc liên tục đối mặt với <strong
+                                        class="text-red-500 font-semibold">thối rễ vàng lá, nứt thân xì mủ, mọt đục thân
+                                        đục cành</strong> - cây yếu, đất mất cân bằng, trái non rụng mỗi khi mưa lớn.
+                                    Mấy cây bị <strong class="text-amber-600 font-semibold">nhiễm Paclo nặng</strong>
+                                    càng khiến anh thêm lo khi năng suất sụt giảm rõ rệt qua từng vụ.
                                 </p>
                                 <p>
-                                    Từ khi kết hợp <strong class="text-primary font-extrabold tracking-wide">IVY MICRO</strong> và <strong class="text-primary font-extrabold tracking-wide">IVY REVIVE</strong>, tình hình thay đổi hẳn. <strong class="text-emerald-600 font-semibold">Đất tơi xốp, pH ổn định trở lại, rễ tơ phục hồi mạnh</strong> giúp cây hấp thu dinh dưỡng tốt hơn. Những đợt mưa lớn không còn là nỗi lo - cây chịu được sốc nước, <strong class="text-emerald-600 font-semibold">trái đậu nhiều và ít rụng hơn</strong> trước rất nhiều.
+                                    Từ khi kết hợp <strong class="text-primary font-extrabold tracking-wide">IVY
+                                        MICRO</strong> và <strong class="text-primary font-extrabold tracking-wide">IVY
+                                        REVIVE</strong>, tình hình thay đổi hẳn. <strong
+                                        class="text-emerald-600 font-semibold">Đất tơi xốp, pH ổn định trở lại, rễ tơ
+                                        phục hồi mạnh</strong> giúp cây hấp thu dinh dưỡng tốt hơn. Những đợt mưa lớn
+                                    không còn là nỗi lo - cây chịu được sốc nước, <strong
+                                        class="text-emerald-600 font-semibold">trái đậu nhiều và ít rụng hơn</strong>
+                                    trước rất nhiều.
                                 </p>
                                 <div class="bg-primary/5 border-l-4 border-primary p-5 rounded-r-2xl shadow-sm mt-6">
                                     <p class="text-slate-800 italic">
-                                        "Đặc biệt, những cây từng nhiễm Paclo nặng vẫn cho <strong class="text-primary font-bold text-lg">trên 100kg trái/cây, cơm vàng bột ngọt, mẫu đẹp</strong>. Cả vườn <strong class="text-primary font-bold">không còn một cây nào bị bệnh</strong> - điều mà trước đây anh Bạc chưa dám kỳ vọng."
+                                        "Đặc biệt, những cây từng nhiễm Paclo nặng vẫn cho <strong
+                                            class="text-primary font-bold text-lg">trên 100kg trái/cây, cơm vàng bột
+                                            ngọt, mẫu đẹp</strong>. Cả vườn <strong class="text-primary font-bold">không
+                                            còn một cây nào bị bệnh</strong> - điều mà trước đây anh Bạc chưa dám kỳ
+                                        vọng."
                                     </p>
                                 </div>
                             </div>
