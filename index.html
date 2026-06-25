@@ -330,7 +330,7 @@
                     <a class="bg-primary hover:bg-primary-container text-on-primary px-2 py-3.5 sm:px-10 sm:py-4 rounded-xl font-bold text-sm sm:text-lg text-center transition-all active:scale-95 shadow-lg shadow-primary/20 flex items-center justify-center leading-tight" href="#order">Đặt hàng ngay</a>
                     <a class="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-2 py-3.5 sm:px-10 sm:py-4 rounded-xl font-bold text-sm sm:text-lg text-center transition-all flex items-center justify-center leading-tight" href="#order">Miễn phí ship</a>
                 </div>
-                <div class="flex flex-wrap items-center gap-x-4 gap-y-3 text-sm text-white/90 mt-2">
+                <div class="hidden sm:flex flex-wrap items-center gap-x-4 gap-y-3 text-sm text-white/90 mt-2">
                     <div class="flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-4 py-2 rounded-full shadow-lg hover:bg-white/20 transition-colors duration-300">
                         <svg class="w-4 h-4 text-yellow-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                         <span class="font-medium tracking-wide">Thanh toán khi nhận hàng</span>
@@ -587,19 +587,18 @@
                             </h2>
 
                             <div
-                                class="text-base md:text-lg text-on-surface-variant space-y-4 mb-8 leading-relaxed text-justify">
+                                class="text-base md:text-lg text-on-surface-variant space-y-5 mb-8 leading-relaxed text-justify">
                                 <p>
-                                    Năm 2019, vườn sầu riêng của <strong>anh Nguyễn Văn Tư (Cư M'gar, Đắk Lắk)</strong>
-                                    gần như bỏ cuộc — đất đai chai cứng như đá, rễ bị thối nghiêm trọng, và trái non
-                                    rụng đầy gốc khiến bao công sức đổ bể.
+                                    Trước đây, vườn sầu riêng của anh Bạc liên tục đối mặt với <strong class="text-red-500 font-semibold">thối rễ vàng lá, nứt thân xì mủ, mọt đục thân đục cành</strong> - cây yếu, đất mất cân bằng, trái non rụng mỗi khi mưa lớn. Mấy cây bị <strong class="text-amber-600 font-semibold">nhiễm Paclo nặng</strong> càng khiến anh thêm lo khi năng suất sụt giảm rõ rệt qua từng vụ.
                                 </p>
                                 <p>
-                                    Sau khi biết đến và tin tưởng thử nghiệm chế phẩm vi sinh <strong>Green Earth
-                                        SL</strong> theo lời khuyên của cán bộ khuyến nông, phép màu đã đến. Chỉ sau 2
-                                    vụ canh tác, nền đất đã mềm xốp trở lại, hệ rễ tơ phục hồi mạnh mẽ giúp cây vực dậy
-                                    sức sống. Đến <strong>vụ mùa 2024</strong>, anh Tư xuất sắc thu về gần <strong>4
-                                        tấn</strong> sầu riêng đạt chất lượng cao.
+                                    Từ khi kết hợp <strong class="text-primary font-extrabold tracking-wide">IVY MICRO</strong> và <strong class="text-primary font-extrabold tracking-wide">IVY REVIVE</strong>, tình hình thay đổi hẳn. <strong class="text-emerald-600 font-semibold">Đất tơi xốp, pH ổn định trở lại, rễ tơ phục hồi mạnh</strong> giúp cây hấp thu dinh dưỡng tốt hơn. Những đợt mưa lớn không còn là nỗi lo - cây chịu được sốc nước, <strong class="text-emerald-600 font-semibold">trái đậu nhiều và ít rụng hơn</strong> trước rất nhiều.
                                 </p>
+                                <div class="bg-primary/5 border-l-4 border-primary p-5 rounded-r-2xl shadow-sm mt-6">
+                                    <p class="text-slate-800 italic">
+                                        "Đặc biệt, những cây từng nhiễm Paclo nặng vẫn cho <strong class="text-primary font-bold text-lg">trên 100kg trái/cây, cơm vàng bột ngọt, mẫu đẹp</strong>. Cả vườn <strong class="text-primary font-bold">không còn một cây nào bị bệnh</strong> - điều mà trước đây anh Bạc chưa dám kỳ vọng."
+                                    </p>
+                                </div>
                             </div>
 
                             <div class="grid grid-cols-3 gap-4">
@@ -2051,7 +2050,7 @@
                             </div>
 
                             <!-- Icons chứng nhận tiện ích dưới cùng form -->
-                            <div class="flex flex-col sm:flex-row sm:flex-wrap gap-3 pt-6 border-t border-slate-100">
+                            <div class="hidden sm:flex sm:flex-row sm:flex-wrap gap-3 pt-6 border-t border-slate-100">
                                 <div
                                     class="inline-flex items-center gap-2 bg-emerald-50/80 text-emerald-800 py-2 px-4 rounded-full text-sm font-medium w-fit border border-emerald-100/50">
                                     <span class="material-symbols-outlined text-[18px]">verified_user</span>
@@ -2302,21 +2301,21 @@
                     </li>
 
                     <li>
-                        <a class="hover:text-primary-fixed transition-all" href="#">
+                        <button id="openReturnModal" class="hover:text-primary-fixed transition-all text-left">
                             Chính sách đổi trả
-                        </a>
+                        </button>
                     </li>
 
                     <li>
-                        <a class="hover:text-primary-fixed transition-all" href="#">
+                        <button id="openShippingModal" class="hover:text-primary-fixed transition-all text-left">
                             Vận chuyển & Thanh toán
-                        </a>
+                        </button>
                     </li>
 
                     <li>
-                        <a class="hover:text-primary-fixed transition-all" href="#">
+                        <button id="openPrivacyModal" class="hover:text-primary-fixed transition-all text-left">
                             Bảo mật thông tin
-                        </a>
+                        </button>
                     </li>
 
                 </ul>
@@ -2371,6 +2370,174 @@
                     </li>
 
                 </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RETURN POLICY MODAL -->
+    <div id="returnModal" class="fixed inset-0 z-[9999] hidden items-center justify-center">
+
+        <!-- Overlay -->
+        <div id="modalReturnOverlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+        <!-- Content -->
+        <div
+            class="relative bg-white rounded-3xl shadow-2xl w-[92%] max-w-4xl max-h-[85vh] overflow-y-auto p-8 md:p-10 animate-modal">
+
+            <button id="closeReturnModal"
+                class="absolute top-5 right-5 text-gray-500 hover:text-red-500 transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+
+            <h2 class="text-center text-3xl font-bold text-green-700 mb-8">
+                CHÍNH SÁCH ĐỔI TRẢ
+            </h2>
+
+            <div class="text-gray-700 leading-relaxed space-y-5 text-align: justify">
+
+                <h3 class="font-bold text-lg text-gray-900 mb-2">Trường hợp được đổi trả 100% miễn phí:</h3>
+                <ul class="list-disc pl-6 space-y-4">
+                    <li>
+                        <strong>Sản phẩm bị lỗi từ nhà sản xuất:</strong>
+                        Vón cục cứng, nấm mốc, biến màu ngay khi khui mẻ đầu tiên.
+                    </li>
+                    <li>
+                        <strong>Sự cố vận chuyển:</strong>
+                        Bao bì bục rách, xì hơi, mất tem nhãn niêm phong.
+                    </li>
+                    <li>
+                        <strong>Giao sai hàng:</strong>
+                        Sai dòng phân bón (ví dụ đặt phân nuôi trái lại giao phân phục hồi), hoặc sai trọng lượng.
+                    </li>
+                    <li>
+                        <strong>Thời gian áp dụng:</strong>
+                        Trong vòng 07 ngày kể từ khi nhận hàng.
+                    </li>
+                    <li>
+                        <strong>Quy trình xử lý:</strong>
+                        Bà con chỉ cần gửi video quay lúc đồng kiểm hoặc chụp ảnh tình trạng hàng qua Zalo công ty. Công
+                        ty sẽ chịu 100% phí ship 2 chiều để gửi hàng mới tận vườn.
+                    </li>
+                </ul>
+
+                <h3 class="font-bold text-lg text-gray-900 mb-2 mt-6">Trường hợp được hoàn tiền 100%:</h3>
+                <ul class="list-disc pl-6 space-y-4">
+                    <li>
+                        <strong>Cam kết chất lượng:</strong>
+                        Cam kết hoàn tiền trong 30 ngày nếu không cải thiện.
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SHIPPING POLICY MODAL -->
+    <div id="shippingModal" class="fixed inset-0 z-[9999] hidden items-center justify-center">
+
+        <!-- Overlay -->
+        <div id="modalShippingOverlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+        <!-- Content -->
+        <div
+            class="relative bg-white rounded-3xl shadow-2xl w-[92%] max-w-4xl max-h-[85vh] overflow-y-auto p-8 md:p-10 animate-modal">
+
+            <button id="closeShippingModal"
+                class="absolute top-5 right-5 text-gray-500 hover:text-red-500 transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+
+            <h2 class="text-center text-3xl font-bold text-green-700 mb-8">
+                VẬN CHUYỂN & THANH TOÁN
+            </h2>
+
+            <div class="text-gray-700 leading-relaxed space-y-5 text-align: justify">
+
+                <h3 class="font-bold text-lg text-gray-900 mb-2">1. Chính Sách Vận Chuyển: "Giao Hàng Tận Nhà Vườn"</h3>
+                <p>Hiểu được nỗi vất vả của bà con và đặc thù phân bón sầu riêng thường có trọng lượng lớn, công ty áp
+                    dụng chính sách vận chuyển đặc quyền nhằm hỗ trợ tối đa cho nhà vườn:</p>
+                <ul class="list-disc pl-6 space-y-4">
+                    <li>
+                        <strong>Miễn phí vận chuyển 100%:</strong>
+                        Áp dụng cho tất cả các đơn hàng phân bón sầu riêng đặt mua trực tiếp tại website. Bà con không
+                        phải trả thêm bất kỳ chi phí vận chuyển phát sinh nào.
+                    </li>
+                    <li>
+                        <strong>Giao tận nhà vườn:</strong>
+                        Hàng hóa sẽ được vận chuyển bằng xe tải hoặc các đơn vị giao hàng chuyên nghiệp đến tận nhà hoặc
+                        tận rẫy/vườn sầu riêng của bà con (áp dụng cho các tuyến đường xe tải vào được), giúp bà con
+                        tiết kiệm thời gian và công sức khuân vác.
+                    </li>
+                </ul>
+
+                <h3 class="font-bold text-lg text-gray-900 mb-2 mt-6">2. Phương Thức Thanh Toán: "Nhận Hàng Kiểm Tra -
+                    Trả Tiền Sau (COD)"</h3>
+                <p>Để đảm bảo sự minh bạch, uy tín và an tâm tuyệt đối cho các nhà vườn, công ty áp dụng duy nhất một
+                    quy trình thanh toán an toàn:</p>
+                <ul class="list-disc pl-6 space-y-4">
+                    <li>
+                        <strong>Thanh toán tiền mặt khi nhận hàng (COD):</strong>
+                        Bà con không cần chuyển khoản trước, không cần đặt cọc. Mọi giao dịch tiền mặt chỉ diễn ra khi
+                        hàng đã về đến tay.
+                    </li>
+                    <li>
+                        <strong>Quyền lợi đồng kiểm:</strong>
+                        Khi xe giao phân bón đến nơi, bà con hoàn toàn có quyền yêu cầu tài xế giữ hàng để kiểm tra
+                        trước khi trả tiền.
+                    </li>
+                    <li>
+                        <strong>Tiêu chí kiểm tra:</strong>
+                        Bà con kiểm tra kỹ xem có đúng loại phân bón sầu riêng mình đã đặt không (phân bón lá, phân bón
+                        gốc, phân nở...), đếm đủ số lượng bao/chai, và đảm bảo bao bì nguyên vẹn, không bị bục rách hay
+                        ẩm ướt.
+                    </li>
+                    <li>
+                        <strong>Hoàn tất thanh toán:</strong>
+                        Sau khi xác nhận hàng hóa chuẩn chất lượng và đúng số lượng, bà con mới tiến hành thanh toán
+                        tiền mặt trực tiếp cho tài xế hoặc nhân viên giao hàng để nhận phiếu giao hàng.
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PRIVACY POLICY MODAL -->
+    <div id="privacyModal" class="fixed inset-0 z-[9999] hidden items-center justify-center">
+
+        <!-- Overlay -->
+        <div id="modalPrivacyOverlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+        <!-- Content -->
+        <div
+            class="relative bg-white rounded-3xl shadow-2xl w-[92%] max-w-4xl max-h-[85vh] overflow-y-auto p-8 md:p-10 animate-modal">
+
+            <button id="closePrivacyModal"
+                class="absolute top-5 right-5 text-gray-500 hover:text-red-500 transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+
+            <h2 class="text-center text-3xl font-bold text-green-700 mb-8">
+                BẢO MẬT THÔNG TIN
+            </h2>
+
+            <div class="text-gray-700 leading-relaxed space-y-5 text-align: justify">
+
+                <h3 class="font-bold text-lg text-gray-900 mb-2">Mục đích thu thập:</h3>
+                <p>Thông tin của bà con (Tên, Số điện thoại, Địa chỉ vườn, Diện tích canh tác) chỉ được dùng cho mục
+                    đích giao hàng và để đội ngũ kỹ sư nông nghiệp gọi điện tư vấn, đồng hành chăm sóc cây theo từng
+                    giai đoạn.</p>
+
+                <h3 class="font-bold text-lg text-gray-900 mb-2 mt-6">Cam kết cốt lõi:</h3>
+                <p>Tuyệt đối không bán, rò rỉ hay trao đổi data khách hàng cho bất kỳ bên thứ ba nào khác (tránh tình
+                    trạng bà con bị các hãng phân bón/thuốc bảo vệ thực vật rác gọi điện làm phiền).</p>
 
             </div>
 
@@ -2462,6 +2629,90 @@
 
             if (modalOverlay) {
                 modalOverlay.addEventListener('click', closeWarranty);
+            }
+
+            // Return Modal Logic
+            const returnModal = document.getElementById('returnModal');
+            const openReturnModalBtn = document.getElementById('openReturnModal');
+            const closeReturnModalBtn = document.getElementById('closeReturnModal');
+            const modalReturnOverlay = document.getElementById('modalReturnOverlay');
+
+            if (returnModal && openReturnModalBtn) {
+                openReturnModalBtn.addEventListener('click', () => {
+                    returnModal.classList.remove('hidden');
+                    returnModal.classList.add('flex');
+                });
+            }
+
+            const closeReturn = () => {
+                if (returnModal) {
+                    returnModal.classList.add('hidden');
+                    returnModal.classList.remove('flex');
+                }
+            };
+
+            if (closeReturnModalBtn) {
+                closeReturnModalBtn.addEventListener('click', closeReturn);
+            }
+
+            if (modalReturnOverlay) {
+                modalReturnOverlay.addEventListener('click', closeReturn);
+            }
+
+            // Shipping Modal Logic
+            const shippingModal = document.getElementById('shippingModal');
+            const openShippingModalBtn = document.getElementById('openShippingModal');
+            const closeShippingModalBtn = document.getElementById('closeShippingModal');
+            const modalShippingOverlay = document.getElementById('modalShippingOverlay');
+
+            if (shippingModal && openShippingModalBtn) {
+                openShippingModalBtn.addEventListener('click', () => {
+                    shippingModal.classList.remove('hidden');
+                    shippingModal.classList.add('flex');
+                });
+            }
+
+            const closeShipping = () => {
+                if (shippingModal) {
+                    shippingModal.classList.add('hidden');
+                    shippingModal.classList.remove('flex');
+                }
+            };
+
+            if (closeShippingModalBtn) {
+                closeShippingModalBtn.addEventListener('click', closeShipping);
+            }
+
+            if (modalShippingOverlay) {
+                modalShippingOverlay.addEventListener('click', closeShipping);
+            }
+
+            // Privacy Modal Logic
+            const privacyModal = document.getElementById('privacyModal');
+            const openPrivacyModalBtn = document.getElementById('openPrivacyModal');
+            const closePrivacyModalBtn = document.getElementById('closePrivacyModal');
+            const modalPrivacyOverlay = document.getElementById('modalPrivacyOverlay');
+
+            if (privacyModal && openPrivacyModalBtn) {
+                openPrivacyModalBtn.addEventListener('click', () => {
+                    privacyModal.classList.remove('hidden');
+                    privacyModal.classList.add('flex');
+                });
+            }
+
+            const closePrivacy = () => {
+                if (privacyModal) {
+                    privacyModal.classList.add('hidden');
+                    privacyModal.classList.remove('flex');
+                }
+            };
+
+            if (closePrivacyModalBtn) {
+                closePrivacyModalBtn.addEventListener('click', closePrivacy);
+            }
+
+            if (modalPrivacyOverlay) {
+                modalPrivacyOverlay.addEventListener('click', closePrivacy);
             }
         });
     </script>
